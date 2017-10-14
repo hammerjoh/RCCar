@@ -6,11 +6,71 @@
     tools:context="de.hammer.rccar.StartActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_laenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/message" />
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/leange"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/breite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/breite"
+        android:layout_below="@+id/tv_laenge"
+        android:layout_alignLeft="@+id/tv_laenge"
+        android:layout_alignStart="@+id/tv_laenge" />
+
+    <TextView
+        android:id="@+id/flaecheninhalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/flaecheninhalt"
+        android:layout_below="@+id/breite"
+        android:layout_alignLeft="@+id/breite"
+        android:layout_alignStart="@+id/breite" />
+
+    <EditText
+        android:id="@+id/edit_laenge"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginStart="78dp"
+        android:ems="10"
+        android:hint="@string/leange"
+        android:inputType="numberDecimal"
+        android:layout_alignBottom="@+id/tv_laenge"
+        android:layout_toRightOf="@+id/flaecheninhalt"
+        android:layout_toEndOf="@+id/flaecheninhalt" />
+
+    <EditText
+        android:id="@+id/edit_breite"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/breite"
+        android:inputType="numberDecimal"
+        android:layout_alignBaseline="@+id/breite"
+        android:layout_alignBottom="@+id/breite"
+        android:layout_alignLeft="@+id/edit_laenge"
+        android:layout_alignStart="@+id/edit_laenge" />
+
+    <EditText
+        android:id="@+id/edit_flaecheninhalt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_breite"
+        android:layout_alignStart="@+id/edit_breite"
+        android:layout_alignTop="@+id/flaecheninhalt"
+        android:ems="10"
+        android:hint="@string/flaecheninhalt"
+        android:inputType="none" />
 
 </RelativeLayout>

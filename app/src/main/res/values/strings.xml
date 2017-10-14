@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">RC Car</string>
     <string name="message">keine Gedanken</string>
+    <string name="leange">Länge</string>
+    <string name="breite">Breite</string>
+    <string name="flaecheninhalt">Flächeninhalt</string>
 </resources>
