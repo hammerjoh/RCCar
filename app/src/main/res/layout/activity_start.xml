@@ -38,7 +38,7 @@
         android:layout_alignStart="@+id/breite" />
 
     <EditText
-        android:id="@+id/edit_laenge"
+        android:id="@+id/va_laenge"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="78dp"
@@ -51,7 +51,7 @@
         android:layout_toEndOf="@+id/flaecheninhalt" />
 
     <EditText
-        android:id="@+id/edit_breite"
+        android:id="@+id/va_breite"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -59,15 +59,15 @@
         android:inputType="numberDecimal"
         android:layout_alignBaseline="@+id/breite"
         android:layout_alignBottom="@+id/breite"
-        android:layout_alignLeft="@+id/edit_laenge"
-        android:layout_alignStart="@+id/edit_laenge" />
+        android:layout_alignLeft="@+id/va_laenge"
+        android:layout_alignStart="@+id/va_laenge" />
 
     <EditText
-        android:id="@+id/edit_flaecheninhalt"
+        android:id="@+id/va_flaecheninhalt"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edit_breite"
-        android:layout_alignStart="@+id/edit_breite"
+        android:layout_alignLeft="@+id/va_breite"
+        android:layout_alignStart="@+id/va_breite"
         android:layout_alignTop="@+id/flaecheninhalt"
         android:ems="10"
         android:hint="@string/flaecheninhalt"
