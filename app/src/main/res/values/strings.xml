@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">RC Car</string>
+    <string name="app_name" translatable="false">RC Car</string>
     <string name="message">keine Gedanken</string>
 </resources>
