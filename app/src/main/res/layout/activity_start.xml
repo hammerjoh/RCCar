@@ -71,6 +71,7 @@
         android:layout_alignTop="@+id/flaecheninhalt"
         android:ems="10"
         android:hint="@string/flaecheninhalt"
+        android:editable="false"
         android:inputType="none" />
 
 </RelativeLayout>
