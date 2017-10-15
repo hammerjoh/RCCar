@@ -8,30 +8,42 @@
 
     <EditText
         android:id="@+id/va_laenge"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:hint="@string/leange"
         android:inputType="numberDecimal"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btn_berechne"
-        android:layout_alignEnd="@+id/btn_berechne" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:imeOptions="actionDone"/>
 
     <EditText
         android:id="@+id/va_breite"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:hint="@string/breite"
         android:inputType="numberDecimal"
         android:layout_below="@+id/va_laenge"
-        android:layout_alignLeft="@+id/va_laenge"
-        android:layout_alignStart="@+id/va_laenge" />
+        android:layout_centerHorizontal="true"
+        android:imeOptions="actionDone"/>
+
+    <EditText
+        android:id="@+id/va_hoehe"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/va_breite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:hint="@string/hoehe"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"/>
 
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/va_breite"
+        android:layout_below="@+id/va_hoehe"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp" />
 
@@ -40,8 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/berechne"
+        android:layout_marginTop="5dp"
         android:layout_below="@+id/tv_result"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

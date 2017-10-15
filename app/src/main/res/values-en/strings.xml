@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="message">no toughts</string>
-    <string name="breite">width</string>
+    <string name="breite">width in cm</string>
     <string name="flaecheninhalt">area</string>
-    <string name="leange">length</string>
+    <string name="leange">length in cm</string>
     <string name="berechne">Calculate</string>
+    <string name="Ergebnis_flaeche">"The area is "</string>
+    <string name="Ergebnis_volmen">"The volume is "</string>
+    <string name="hoehe">heigh in cm</string>
+    <string name="laenge_eingeben">Please enter height!</string>
+    <string name="breite_eingeben">Please enter width!</string>
 </resources>
