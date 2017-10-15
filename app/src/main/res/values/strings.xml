@@ -4,4 +4,5 @@
     <string name="leange">Länge</string>
     <string name="breite">Breite</string>
     <string name="flaecheninhalt">Flächeninhalt</string>
+    <string name="berechne">Berechne</string>
 </resources>

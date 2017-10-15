@@ -5,73 +5,43 @@
     android:layout_height="match_parent"
     tools:context="de.hammer.rccar.StartActivity">
 
-    <TextView
-        android:id="@+id/tv_laenge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/leange"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/breite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/breite"
-        android:layout_below="@+id/tv_laenge"
-        android:layout_alignLeft="@+id/tv_laenge"
-        android:layout_alignStart="@+id/tv_laenge" />
-
-    <TextView
-        android:id="@+id/flaecheninhalt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/flaecheninhalt"
-        android:layout_below="@+id/breite"
-        android:layout_alignLeft="@+id/breite"
-        android:layout_alignStart="@+id/breite" />
 
     <EditText
         android:id="@+id/va_laenge"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="78dp"
-        android:layout_marginStart="78dp"
-        android:ems="10"
         android:hint="@string/leange"
         android:inputType="numberDecimal"
-        android:layout_alignBottom="@+id/tv_laenge"
-        android:layout_toRightOf="@+id/flaecheninhalt"
-        android:layout_toEndOf="@+id/flaecheninhalt" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btn_berechne"
+        android:layout_alignEnd="@+id/btn_berechne" />
 
     <EditText
         android:id="@+id/va_breite"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="@string/breite"
         android:inputType="numberDecimal"
-        android:layout_alignBaseline="@+id/breite"
-        android:layout_alignBottom="@+id/breite"
+        android:layout_below="@+id/va_laenge"
         android:layout_alignLeft="@+id/va_laenge"
         android:layout_alignStart="@+id/va_laenge" />
 
-    <EditText
-        android:id="@+id/va_flaecheninhalt"
-        android:layout_width="100dp"
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/va_breite"
-        android:layout_alignStart="@+id/va_breite"
-        android:layout_alignTop="@+id/flaecheninhalt"
-        android:ems="10"
-        android:hint="@string/flaecheninhalt"
-        android:editable="false"
-        android:inputType="none" />
+        android:layout_below="@+id/va_breite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btn_berechne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/berechne"
+        android:layout_below="@+id/tv_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
 
 </RelativeLayout>
