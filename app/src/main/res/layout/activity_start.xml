@@ -34,7 +34,7 @@
         android:layout_below="@+id/va_HZ"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:spinnerMode="dropdown"></Spinner>
+        android:spinnerMode="dropdown"/>
 
 
     <TextView
