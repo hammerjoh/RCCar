@@ -16,18 +16,17 @@ public class StartActivity extends AppCompatActivity {
 
     public float MZ;
     public float HZ;
-    public String flaeche;
-    public String volumen;
+    public String uebersetzung;
     public int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        final Spinner uebersetzung = (Spinner) findViewById(R.id.dp_uebersetztung);
+        final Spinner auswahl = (Spinner) findViewById(R.id.dp_uebersetztung);
         final ArrayAdapter uebersettzungsadapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.uebersetungen));
         uebersettzungsadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        uebersetzung.setAdapter(uebersettzungsadapter);
+        auswahl.setAdapter(uebersettzungsadapter);
         final EditText va_MZ = (EditText) findViewById(R.id.va_MZ);
         final EditText va_HZ = (EditText) findViewById(R.id.va_HZ);
         final TextView va_flaeche = (TextView) findViewById(R.id.tv_result);
@@ -42,12 +41,11 @@ public class StartActivity extends AppCompatActivity {
                     if(va_MZ.getText().toString().isEmpty()) Toast.makeText(getApplicationContext(),R.string.MZ_eingeben,Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    pos = uebersetzung.getSelectedItemPosition();
+                    pos = auswahl.getSelectedItemPosition();
                     MZ = Float.parseFloat(va_MZ.getText().toString());
                     HZ = Float.parseFloat(va_HZ.getText().toString());
-                    //flaeche =String.format("%.2f",laenge * breite);
-                    flaeche = String.format("%.2f",Float.parseFloat(getResources().getStringArray(R.array.uebersetungen)[pos])*HZ*MZ);
-                    va_flaeche.setText(getString(R.string.Ergebnis) + flaeche);
+                    uebersetzung = String.format("%.2f",Float.parseFloat(getResources().getStringArray(R.array.uebersetungen)[pos])*HZ*MZ);
+                    va_flaeche.setText(getString(R.string.Ergebnis) + uebersetzung);
                 }
             }
         });

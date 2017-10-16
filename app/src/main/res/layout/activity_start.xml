@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context="de.hammer.rccar.StartActivity">
 
 
@@ -10,22 +10,28 @@
         android:id="@+id/va_MZ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="@string/MZ"
-        android:inputType="numberDecimal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:imeOptions="actionDone"/>
+        android:hint="@string/MZ"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorHint="@android:color/holo_red_light" />
 
     <EditText
         android:id="@+id/va_HZ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="@string/HZ"
-        android:inputType="numberDecimal"
         android:layout_below="@+id/va_MZ"
         android:layout_centerHorizontal="true"
-        android:imeOptions="actionDone"/>
+        android:hint="@string/HZ"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/holo_red_light"
+        android:textColor="@android:color/holo_green_light" />
 
     <Spinner
         android:id="@+id/dp_uebersetztung"
@@ -34,6 +40,7 @@
         android:layout_below="@+id/va_HZ"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:textAlignment="center"
         android:spinnerMode="dropdown"/>
 
 
