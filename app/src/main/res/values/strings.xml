@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name" translatable="false">RC Car</string>
-    <string name="message">keine Gedanken</string>
-    <string name="leange">Länge in cm</string>
-    <string name="breite">Breite in cm</string>
-    <string name="flaecheninhalt">Flächeninhalt</string>
+    <string name="MZ" translatable="false">MZ</string>
+    <string name="HZ" translatable="false">HZ</string>
     <string name="berechne">Berechne</string>
-    <string name="Ergebnis_flaeche">"Der Flächeninhalt beträgt "</string>
-    <string name="Ergebnis_volmen">"Das Volumen beträgt "</string>
-    <string name="cm2" translatable="false">" cm²"</string>
-    <string name="cm3" translatable="false">" cm³"</string>
-    <string name="hoehe">Höhe in cm</string>
-    <string name="laenge_eingeben">Bitte länge eingeben!</string>
-    <string name="breite_eingeben">Bitte breite eingeben!</string>
+    <string name="Ergebnis">"Die Übersetzung ist "</string>
+    <string name="MZ_eingeben">Bitte MZ eingeben!</string>
+    <string name="HZ_eingeben">Bitte HZ eingeben!</string>
+    
+    <string-array name="uebersetungen">
+        <item>2.47</item>
+        <item>2.6</item>
+    </string-array>
+    
 </resources>

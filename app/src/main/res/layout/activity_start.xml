@@ -7,10 +7,10 @@
 
 
     <EditText
-        android:id="@+id/va_laenge"
+        android:id="@+id/va_MZ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="@string/leange"
+        android:hint="@string/MZ"
         android:inputType="numberDecimal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -18,32 +18,30 @@
         android:imeOptions="actionDone"/>
 
     <EditText
-        android:id="@+id/va_breite"
+        android:id="@+id/va_HZ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="@string/breite"
+        android:hint="@string/HZ"
         android:inputType="numberDecimal"
-        android:layout_below="@+id/va_laenge"
+        android:layout_below="@+id/va_MZ"
         android:layout_centerHorizontal="true"
         android:imeOptions="actionDone"/>
 
-    <EditText
-        android:id="@+id/va_hoehe"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/va_breite"
+    <Spinner
+        android:id="@+id/dp_uebersetztung"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/va_HZ"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:hint="@string/hoehe"
-        android:inputType="numberDecimal"
-        android:imeOptions="actionDone"/>
+        android:spinnerMode="dropdown"></Spinner>
 
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/va_hoehe"
+        android:layout_below="@+id/dp_uebersetztung"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp" />
 
