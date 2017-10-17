@@ -4,4 +4,5 @@
     <string name="Ergebnis">"The transmission is "</string>
     <string name="HZ_eingeben">Please enter HZ</string>
     <string name="MZ_eingeben">Please enter MZ</string>
+    <string name="B6_sheet">Setup Sheet</string>
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">RC Car</string>
     <string name="MZ" translatable="false">MZ</string>
@@ -6,10 +7,11 @@
     <string name="Ergebnis">"Die Übersetzung ist "</string>
     <string name="MZ_eingeben">Bitte MZ eingeben!</string>
     <string name="HZ_eingeben">Bitte HZ eingeben!</string>
-    
+
     <string-array name="uebersetungen">
         <item>2.47</item>
         <item>2.6</item>
     </string-array>
-    
+    <string name="B6_sheet">Setup Blatt</string>
+
 </resources>
