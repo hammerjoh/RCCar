@@ -1,33 +1,20 @@
 package de.hammer.rccar;
 
 public class Datenbank {
-    private String product;
-    private int quantity;
     private long id;
+    private String speichername;
+    private String fahrer;
+    private String veranstaltung;
+    private String strecke;
 
 
-    public Datenbank(String product, int quantity, long id) {
-        this.product = product;
-        this.quantity = quantity;
+    public Datenbank(long id, String speichername, String fahrer, String veranstaltung, String strecke) {
         this.id = id;
-    }
+        this.speichername = speichername;
+        this.fahrer = fahrer;
+        this.veranstaltung = veranstaltung;
+        this.strecke = strecke;
 
-
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
 
@@ -39,10 +26,28 @@ public class Datenbank {
         this.id = id;
     }
 
+    public String getSpeichername() {
+        return speichername;
+    }
+
+
+    public void setSpeichername(String speichername) {
+        this.speichername = speichername;
+    }
+
+    public String getDriver() {
+        return fahrer;
+    }
+
+
+    public void setDriver(String fahrer) {
+        this.fahrer = fahrer;
+    }
+
 
     @Override
     public String toString() {
-        String output = quantity + " x " + product;
+        String output = speichername+ ", " + fahrer+ ", "  + veranstaltung + ", " +strecke;
 
         return output;
     }

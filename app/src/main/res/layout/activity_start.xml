@@ -1,71 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="de.hammer.rccar.StartActivity">
 
-    <EditText
-        android:id="@+id/va_MZ"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:hint="@string/MZ"
-        android:imeOptions="actionDone"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textColorHint="@android:color/holo_red_light" />
-
-    <EditText
-        android:id="@+id/va_HZ"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/va_MZ"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/HZ"
-        android:imeOptions="actionDone"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColorHint="@android:color/holo_red_light"
-        android:textColor="@android:color/holo_green_light" />
-
-    <Spinner
-        android:id="@+id/dp_uebersetztung"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_below="@+id/va_HZ"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:textAlignment="center"
-        android:spinnerMode="dropdown"/>
-
-
-    <TextView
-        android:id="@+id/tv_result"
+    <RelativeLayout
+        android:id="@+id/lay_berechnung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dp_uebersetztung"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp" />
+        android:background="@android:color/darker_gray">
 
-    <Button
-        android:id="@+id/btn_berechne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/berechne"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/tv_result"
-        android:layout_centerHorizontal="true" />
+        <EditText
+            android:id="@+id/va_MZ"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/MZ"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textColorHint="@android:color/holo_red_light" />
+
+        <EditText
+            android:id="@+id/va_HZ"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/va_MZ"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/HZ"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_red_light" />
+
+        <Spinner
+            android:id="@+id/dp_uebersetztung"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/va_HZ"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:dropDownSelector="@android:color/darker_gray"
+            android:popupBackground="@android:color/darker_gray"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dp_uebersetztung"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/btn_berechne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_result"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/berechne" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btn_b6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
         android:text="@string/B6_sheet" />
+
+    <ListView
+        android:id="@+id/listview_saved_sheets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_berechnung"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp" />
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_b6"
+        android:layout_alignRight="@+id/btn_b6"
+        android:layout_below="@+id/btn_b6"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/btn_erzeuge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/va_dateiname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_erzeuge" />
+
+        <EditText
+            android:id="@+id/va_dateiname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/va_dateiname"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
