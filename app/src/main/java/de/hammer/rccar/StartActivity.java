@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -19,7 +21,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class StartActivity extends AppCompatActivity implements View.OnClickListener {
+public class StartActivity extends AppCompatActivity implements View.OnClickListener{
 
     /**   Variablen   **/
 
@@ -37,9 +39,10 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     private EditText va_Dateiname;
     private TextView va_flaeche;
     private Button btn_berechne;
-    private Button btn_b6;
+    private Button btn_setupSheets;
     private Button btn_erzeuge;
     private RelativeLayout layout;
+    private ListView lv_gespeicherteSheets;
 
     /** Datenbank Deklarationen   **/
 
@@ -60,7 +63,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         dataSource = new DatenbankSource(this);
 
 
-        /**   Ende Datenbank Test**/
+        /**   Ende Datenbank   **/
 
         va_MZ = (EditText) findViewById(R.id.va_MZ);
         va_HZ = (EditText) findViewById(R.id.va_HZ);
@@ -71,27 +74,21 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 return false;
             }
         });
-        va_Dateiname = (EditText) findViewById(R.id.va_dateiname);
-        va_Dateiname.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                onClick(btn_erzeuge);
-                return false;
-            }
-        });
         va_flaeche = (TextView) findViewById(R.id.tv_result);
 
         auswahl = (Spinner) findViewById(R.id.dp_uebersetztung);
-        final ArrayAdapter uebersettzungsadapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.uebersetungen));
+        final ArrayAdapter<String> uebersettzungsadapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.uebersetungen));
         uebersettzungsadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         auswahl.setAdapter(uebersettzungsadapter);
 
         btn_berechne = (Button) findViewById(R.id.btn_berechne);
         btn_berechne.setOnClickListener(this);
-        btn_b6 = (Button) findViewById(R.id.btn_b6);
-        btn_b6.setOnClickListener(this);
-        btn_erzeuge = (Button) findViewById(R.id.btn_erzeuge);
-        btn_erzeuge.setOnClickListener(this);
+        btn_setupSheets = (Button) findViewById(R.id.btn_setupSheets);
+        btn_setupSheets.setOnClickListener(this);
+
+
+        /**   Tastatur ausblenden und Fokus von Textview entfernen, wenn auf Layout geklickt wird   **/
+
         layout = (RelativeLayout) findViewById(R.id.layout);
         layout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -102,12 +99,9 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             }}
         });
 
-        /**   Tastatur ausblenden und Fokus von Textview entfernen, wenn auf Layout geklickt wird   **/
         findViewById(R.id.layout).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                //InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                //imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                 layout.requestFocus();
                 return false;
             }
@@ -117,13 +111,13 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     private void showAllListEntries () {
         List<Datenbank> savedSheetsList = dataSource.getAllSavedSheets();
 
-        ArrayAdapter<Datenbank> setupSheetsArrayAdapter = new ArrayAdapter<> (
-                this,
-                android.R.layout.simple_list_item_1,
-                savedSheetsList);
+        ArrayAdapter<Datenbank> setupSheetsArrayAdapter = new ArrayAdapter<> (this, R.layout.test_listview, savedSheetsList);
 
-        ListView shoppingMemosListView = (ListView) findViewById(R.id.listview_saved_sheets);
-        shoppingMemosListView.setAdapter(setupSheetsArrayAdapter);
+        lv_gespeicherteSheets = (ListView) findViewById(R.id.listview_saved_sheets);
+        lv_gespeicherteSheets.setAdapter(setupSheetsArrayAdapter);
+        lv_gespeicherteSheets.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        //lv_gespeicherteSheets.setOnItemClickListener(this);
+        //lv_gespeicherteSheets.setOnItemLongClickListener(this);
     }
 
 
@@ -149,14 +143,14 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             }
         }
 
-        if (btn == R.id.btn_b6){
+        if (btn == R.id.btn_setupSheets){
             Intent intent = new Intent(StartActivity.this,SetupSheetActivity.class);
             startActivity(intent);
         }
 
-        if (btn == R.id.btn_erzeuge){
+        if (btn == R.id.btn_neu){
             layout.requestFocus();
-            if (va_Dateiname.getText().toString().isEmpty())Toast.makeText(getApplicationContext(),R.string.Dateinamen_eingeben,Toast.LENGTH_SHORT).show();
+            if (va_Dateiname.getText().toString().isEmpty())va_Dateiname.setError(getString(R.string.Dateinamen_eingeben));
             else {
                 Dateiname = va_Dateiname.getText().toString();
 
@@ -173,6 +167,23 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
 
 
     }
+
+/*
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        Toast.makeText(getApplicationContext(),"click "+i+l,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        Toast.makeText(getApplicationContext(),"Longclick "+i+l,Toast.LENGTH_SHORT).show();
+        lv_gespeicherteSheets.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+        return true;
+    }
+
+*/
     @Override
     protected void onResume() {
         super.onResume();
@@ -191,4 +202,5 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         Log.d(LOG_TAG, "Die Datenquelle wird geschlossen.");
         dataSource.close();
     }
+
 }

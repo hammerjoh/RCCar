@@ -77,7 +77,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_b6"
+        android:id="@+id/btn_setupSheets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -95,39 +95,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="97dp" />
 
-    <RelativeLayout
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btn_b6"
-        android:layout_alignRight="@+id/btn_b6"
-        android:layout_below="@+id/btn_b6"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="19dp"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@color/colorPrimary">
 
-        <Button
-            android:id="@+id/btn_erzeuge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/va_dateiname"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="@string/btn_erzeuge" />
-
-        <EditText
-            android:id="@+id/va_dateiname"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/transparent"
-            android:hint="@string/va_dateiname"
-            android:inputType="text"
-            android:imeOptions="actionDone"
-            android:textAlignment="center" />
-
-    </RelativeLayout>
 
 </RelativeLayout>

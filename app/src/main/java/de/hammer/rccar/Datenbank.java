@@ -47,7 +47,7 @@ public class Datenbank {
 
     @Override
     public String toString() {
-        String output = speichername+ ", " + fahrer+ ", "  + veranstaltung + ", " +strecke;
+        String output = speichername;
 
         return output;
     }

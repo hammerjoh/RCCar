@@ -50,9 +50,7 @@ public class DatenbankSource {
 
         long insertId = database.insert(DatenbankHelper.TABELLE_SETUP_SHEET, null, values);
 
-        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET,
-                spalten, DatenbankHelper.SPALTE_ID + "=" + insertId,
-                null, null, null, null);
+        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET,spalten, DatenbankHelper.SPALTE_ID + "=" + insertId,null, null, null, null);
 
         cursor.moveToFirst();
         Datenbank Datenbank = cursorToDatenbank(cursor);
@@ -120,6 +118,14 @@ public class DatenbankSource {
         cursor.close();
 
         return setupTabelle;
+    }
+
+    public void deleteSheet(Datenbank setupSheets) {
+        long id = setupSheets.getId();
+
+        database.delete(DatenbankHelper.TABELLE_SETUP_SHEET,DatenbankHelper.SPALTE_ID + "=" + id,null);
+
+        Log.d(LOG_TAG, "Eintrag gelöscht! ID: " + id + " Inhalt: " + setupSheets.toString());
     }
 
 }

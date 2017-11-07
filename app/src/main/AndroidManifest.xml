@@ -18,6 +18,9 @@
         <activity android:name=".SetupSheetActivity">
 
         </activity>
+        <activity android:name=".B6_SheetActivity">
+
+        </activity>
     </application>
 
 </manifest>

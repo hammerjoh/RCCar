@@ -12,10 +12,14 @@
         <item>2.47</item>
         <item>2.6</item>
     </string-array>
+
+    <string-array name="chassis">
+        <item>B6</item>
+        <item>B64</item>
+    </string-array>
+
     <string name="B6_sheet">Setup Blatt</string>
-    <string name="btn_erzeuge">Erzeuge</string>
-    <string name="va_dateiname">Dateiname</string>
-    <string name="va_fahrer">Fahrer</string>
+    <string name="btn_erzeuge">Neu</string>
     <string name="Dateinamen_eingeben">Bitte Dateinamen eingeben!</string>
     <string name="textView_Fahrer">Fahrer:</string>
     <string name="textView_Veranstaltung">Veranstaltung:</string>
@@ -68,5 +72,10 @@
     <string name="textView_Teppich">Teppich</string>
     <string name="textView_Kunstrasen">Kunstrasen</string>
     <string name="textView_MultiBelag">Multi Belag</string>
+    <string name="cab_löschen">Einträge löschen</string>
+    <string name="btn_loeschen">Löschen</string>
+    <string name="btn_oeffnen">Öffnen</string>
+    <string name="textView_neuesBlatt">Erstelle neues Blatt</string>
+    <string name="editText_Dateiname">Dateiname</string>
 
 </resources>

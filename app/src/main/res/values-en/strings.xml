@@ -5,9 +5,7 @@
     <string name="HZ_eingeben">Please enter HZ</string>
     <string name="MZ_eingeben">Please enter MZ</string>
     <string name="B6_sheet">Setup Sheet</string>
-    <string name="btn_erzeuge">Add</string>
-    <string name="va_dateiname">Dataname</string>
-    <string name="va_fahrer">Driver</string>
+    <string name="btn_erzeuge">New</string>
     <string name="Dateinamen_eingeben">Please enter Dataname</string>
     <string name="textView_Fahrer">Driver:</string>
     <string name="textView_Veranstaltung">Event:</string>
@@ -60,4 +58,9 @@
     <string name="textView_Teppich">Carpet</string>
     <string name="textView_Kunstrasen">Astroturf</string>
     <string name="textView_MultiBelag">Multi Surface</string>
+    <string name="cab_löschen">delete</string>
+    <string name="btn_loeschen">Delete</string>
+    <string name="btn_oeffnen">Open</string>
+    <string name="textView_neuesBlatt">Create new Sheet</string>
+    <string name="editText_Dateiname">Dataname</string>
 </resources>
