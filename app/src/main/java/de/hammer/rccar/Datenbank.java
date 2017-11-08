@@ -3,14 +3,16 @@ package de.hammer.rccar;
 public class Datenbank {
     private long id;
     private String speichername;
+    private String chassis;
     private String fahrer;
     private String veranstaltung;
     private String strecke;
 
 
-    public Datenbank(long id, String speichername, String fahrer, String veranstaltung, String strecke) {
+    public Datenbank(long id, String speichername, String chassis, String fahrer, String veranstaltung, String strecke) {
         this.id = id;
         this.speichername = speichername;
+        this.chassis = chassis;
         this.fahrer = fahrer;
         this.veranstaltung = veranstaltung;
         this.strecke = strecke;
@@ -35,6 +37,14 @@ public class Datenbank {
         this.speichername = speichername;
     }
 
+    public String getChassis() {
+        return chassis;
+    }
+
+    public  void setChassis(String chassis){
+        this.chassis = chassis;
+    }
+
     public String getDriver() {
         return fahrer;
     }
@@ -47,7 +57,7 @@ public class Datenbank {
 
     @Override
     public String toString() {
-        String output = speichername;
+        String output = speichername+" - "+chassis;
 
         return output;
     }

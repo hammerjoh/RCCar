@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
@@ -80,21 +79,10 @@
         android:id="@+id/btn_setupSheets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/lay_berechnung"
         android:text="@string/B6_sheet" />
-
-    <ListView
-        android:id="@+id/listview_saved_sheets"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/lay_berechnung"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="97dp" />
-
-
 
 </RelativeLayout>

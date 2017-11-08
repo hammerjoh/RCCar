@@ -77,5 +77,8 @@
     <string name="btn_oeffnen">Öffnen</string>
     <string name="textView_neuesBlatt">Erstelle neues Blatt</string>
     <string name="editText_Dateiname">Dateiname</string>
+    <string name="textView_loeschen">Zu löschende Datein auswählen</string>
+    <string name="cab_kopieren">Eintrag kopieren</string>
+    <string name="btn_filter">Filter</string>
 
 </resources>

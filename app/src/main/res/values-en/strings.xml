@@ -63,4 +63,7 @@
     <string name="btn_oeffnen">Open</string>
     <string name="textView_neuesBlatt">Create new Sheet</string>
     <string name="editText_Dateiname">Dataname</string>
+    <string name="textView_loeschen">Mark data to delete</string>
+    <string name="cab_kopieren">copy</string>
+    <string name="btn_filter">Filter</string>
 </resources>

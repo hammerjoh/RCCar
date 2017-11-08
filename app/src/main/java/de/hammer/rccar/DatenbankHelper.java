@@ -19,6 +19,7 @@ public class DatenbankHelper extends SQLiteOpenHelper{
     //Kopf
     public static final String SPALTE_ID                    = "_id";
     public static final String SPALTE_SPEICHERNAME          = "name";
+    public static final String SPALTE_CHASSIS               = "chassis";
     public static final String SPALTE_DRIVER                = "driver";
     public static final String SPALTE_EVENT                 = "event";
     public static final String SPALTE_DATE                  = "date";
@@ -70,6 +71,7 @@ public class DatenbankHelper extends SQLiteOpenHelper{
             "CREATE TABLE " + TABELLE_SETUP_SHEET +
                     "(" + SPALTE_ID              + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     SPALTE_SPEICHERNAME          + " TEXT, " +
+                    SPALTE_CHASSIS               + " TEXT, " +
                     SPALTE_DRIVER                + " TEXT, " +
                     SPALTE_EVENT                 + " TEXT, " +
                     SPALTE_DATE                  + " INTEGER, " +

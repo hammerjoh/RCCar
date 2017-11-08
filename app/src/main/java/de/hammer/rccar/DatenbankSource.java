@@ -1,12 +1,10 @@
 package de.hammer.rccar;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +19,7 @@ public class DatenbankSource {
     private String[] spalten = {
             DatenbankHelper.SPALTE_ID,
             DatenbankHelper.SPALTE_SPEICHERNAME,
+            DatenbankHelper.SPALTE_CHASSIS,
             DatenbankHelper.SPALTE_DRIVER,
             DatenbankHelper.SPALTE_EVENT,
             DatenbankHelper.SPALTE_TRACK
@@ -44,9 +43,11 @@ public class DatenbankSource {
         Log.d(LOG_TAG, "Datenbank mit Hilfe des DbHelpers geschlossen.");
     }
 
-    public Datenbank createSheet(String datei) {
+    public Datenbank createSheet(String datei, String chassis) {
         ContentValues values = new ContentValues();
         values.put(DatenbankHelper.SPALTE_SPEICHERNAME, datei);
+        values.put(DatenbankHelper.SPALTE_CHASSIS,chassis);
+        Log.d(LOG_TAG, "DATEI!!!! "+datei);
 
         long insertId = database.insert(DatenbankHelper.TABELLE_SETUP_SHEET, null, values);
 
@@ -62,17 +63,19 @@ public class DatenbankSource {
     private Datenbank cursorToDatenbank(Cursor cursor) {
         int idIndex = cursor.getColumnIndex(DatenbankHelper.SPALTE_ID);
         int idDateiname = cursor.getColumnIndex(DatenbankHelper.SPALTE_SPEICHERNAME);
+        int idchassis = cursor.getColumnIndex(DatenbankHelper.SPALTE_CHASSIS);
         int idFahrer = cursor.getColumnIndex(DatenbankHelper.SPALTE_DRIVER);
         int idVeranstaltung = cursor.getColumnIndex(DatenbankHelper.SPALTE_EVENT);
         int idStrecke = cursor.getColumnIndex(DatenbankHelper.SPALTE_TRACK);
 
         long id = cursor.getLong(idIndex);
         String dateiname = cursor.getString(idDateiname);
+        String chassis = cursor.getString(idchassis);
         String fahrer = cursor.getString(idFahrer);
         String veranstaltung = cursor.getString(idVeranstaltung);
         String strecke = cursor.getString(idStrecke);
 
-        Datenbank SetupSheet = new Datenbank(id, dateiname, fahrer,veranstaltung,strecke);
+        Datenbank SetupSheet = new Datenbank(id, dateiname, chassis, fahrer,veranstaltung,strecke);
 
         return SetupSheet;
     }
@@ -104,10 +107,7 @@ public class DatenbankSource {
         Werte.put(DatenbankHelper.SPALTE_EVENT, newVeranstaltung);
         Werte.put(DatenbankHelper.SPALTE_TRACK, newStrecke);
 
-        database.update(DatenbankHelper.TABELLE_SETUP_SHEET,
-                Werte,
-                DatenbankHelper.SPALTE_ID + "=" + id,
-                null);
+        database.update(DatenbankHelper.TABELLE_SETUP_SHEET, Werte,DatenbankHelper.SPALTE_ID + "=" + id,null);
 
         Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET,
                 spalten, DatenbankHelper.SPALTE_ID + "=" + id,
