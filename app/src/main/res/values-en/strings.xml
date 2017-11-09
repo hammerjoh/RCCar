@@ -12,10 +12,10 @@
     <string name="textView_Datum">Date:</string>
     <string name="textView_Strecke">Track:</string>
     <string name="textView_Qualifizierung">Qualify:</string>
-    <string name="textView_Tq">TQ:</string>
+    <string name="textView_Tq">TQ</string>
     <string name="textView_Haupt">Main:</string>
     <string name="textView_Ziel">Finsih:</string>
-    <string name="textView_BesteRundenZeit">Best Lap Time:</string>
+    <string name="textView_BesteRundenZeit">Best Lap:</string>
     <string name="textView_VordereAufhaengung">Front Suspension:</string>
     <string name="button_Zuruesetzen">Reset</string>
     <string name="textView_Fahrhoehe">Ride Height:</string>
@@ -61,9 +61,10 @@
     <string name="cab_löschen">delete</string>
     <string name="btn_loeschen">Delete</string>
     <string name="btn_oeffnen">Open</string>
-    <string name="textView_neuesBlatt">Create new Sheet</string>
+    <string name="textView_neuesBlatt">Create</string>
     <string name="editText_Dateiname">Dataname</string>
     <string name="textView_loeschen">Mark data to delete</string>
     <string name="cab_kopieren">copy</string>
     <string name="btn_filter">Filter</string>
+    <string name="btn_abbruch">Cancle</string>
 </resources>

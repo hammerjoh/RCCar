@@ -71,7 +71,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         chassisadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dp_chassis.setAdapter(chassisadapter);
 
-        myBuilder.setPositiveButton("Erstelle", new DialogInterface.OnClickListener() {
+        myBuilder.setPositiveButton(R.string.textView_neuesBlatt, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (et_dateiname.getText().toString().isEmpty()){
@@ -92,7 +92,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
             }
         });
 
-        myBuilder.setNegativeButton("Abbrechen", new DialogInterface.OnClickListener() {
+        myBuilder.setNegativeButton(R.string.btn_abbruch, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -185,7 +185,6 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
     private void showAllListEntries () {
         List<Datenbank> savedSheetsList = dataSource.getAllSavedSheets();
-
         ArrayAdapter<Datenbank> setupSheetsArrayAdapter = new ArrayAdapter<> (this, R.layout.test_listview, savedSheetsList);
 
         lv_gespeicherteSheets = findViewById(R.id.listview_saved_sheets);
@@ -215,7 +214,11 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Log.d(LOG_TAG, "OnItemClick Position "+i);
-        Toast.makeText(getApplicationContext(),"Position "+l,Toast.LENGTH_SHORT).show();
+        Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(i);
+        Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.getSpeichername() + ", Chassis: " + setupTabelle.getChassis());
+        //Toast.makeText(getApplicationContext(),"Sie haben auf die Position " + l + " mit dem Namen " + setupTabelle.getSpeichername() + " und dem Chassis " + setupTabelle.getChassis() + " geklickt.",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(SetupSheetActivity.this,B6_SheetActivity.class);
+        intent.putExtra("ID",setupTabelle.getId());
+        startActivity(intent);
     }
 }

@@ -30,8 +30,8 @@ public class DatenbankHelper extends SQLiteOpenHelper{
     public static final String SPALTE_FINISH                = "finish";
     public static final String SPALTE_BESTLAP               = "bestlap";
     //Front Suspension
-    public static final String SPALTE_RIDE_HEIGHT           = "ride_height";
-    public static final String SPALTE_CAMBER                = "camber";
+    public static final String SPALTE_RIDE_HEIGHT_V         = "ride_height_v";
+    public static final String SPALTE_CAMBER_V              = "camber_v";
     public static final String SPALTE_TOE                   = "toe";
     public static final String SPALTE_ARM_TYPE              = "arm_type";
     public static final String SPALTE_TOWER_TYPE            = "tower_type";
@@ -74,15 +74,15 @@ public class DatenbankHelper extends SQLiteOpenHelper{
                     SPALTE_CHASSIS               + " TEXT, " +
                     SPALTE_DRIVER                + " TEXT, " +
                     SPALTE_EVENT                 + " TEXT, " +
-                    SPALTE_DATE                  + " INTEGER, " +
+                    SPALTE_DATE                  + " TEXT, " +
                     SPALTE_TRACK                 + " TEXT, " +
                     SPALTE_QUALIFY               + " TEXT, " +
-                    SPALTE_TQ                    + " INTEGER, " +
+                    SPALTE_TQ                    + " TEXT, " +
                     SPALTE_MAIN                  + " TEXT, " +
                     SPALTE_FINISH                + " TEXT, " +
                     SPALTE_BESTLAP               + " TEXT, " +
-                    SPALTE_RIDE_HEIGHT           + " TEXT, " +
-                    SPALTE_CAMBER                + " TEXT, " +
+                    SPALTE_RIDE_HEIGHT_V         + " TEXT, " +
+                    SPALTE_CAMBER_V              + " TEXT, " +
                     SPALTE_TOE                   + " TEXT, " +
                     SPALTE_ARM_TYPE              + " TEXT, " +
                     SPALTE_TOWER_TYPE            + " TEXT, " +
@@ -91,30 +91,30 @@ public class DatenbankHelper extends SQLiteOpenHelper{
                     SPALTE_KICK_UP_ANGLE         + " TEXT, " +
                     SPALTE_WHEEL_HEX             + " TEXT, " +
                     SPALTE_FS_NOTES              + " TEXT, " +
-                    SPALTE_ARB_NONE              + " INTEGER, " +
-                    SPALTE_ARB_WHITE             + " INTEGER, " +
-                    SPALTE_ARB_GRAY              + " INTEGER, " +
-                    SPALTE_ARB_BLUE              + " INTEGER, " +
-                    SPALTE_ARB_OTHER             + " INTEGER, " +
+                    SPALTE_ARB_NONE              + " TEXT, " +
+                    SPALTE_ARB_WHITE             + " TEXT, " +
+                    SPALTE_ARB_GRAY              + " TEXT, " +
+                    SPALTE_ARB_BLUE              + " TEXT, " +
+                    SPALTE_ARB_OTHER             + " TEXT, " +
                     SPALTE_BUMPER_STEER_SPACING  + " TEXT, " +
-                    SPALTE_AXLE_HEIGHT_0         + " INTEGER, " +
-                    SPALTE_AXLE_HEIGHT_1         + " INTEGER, " +
-                    SPALTE_AXLE_HEIGHT_2         + " INTEGER, " +
-                    SPALTE_AXLE_HEIGHT_3         + " INTEGER, " +
+                    SPALTE_AXLE_HEIGHT_0         + " TEXT, " +
+                    SPALTE_AXLE_HEIGHT_1         + " TEXT, " +
+                    SPALTE_AXLE_HEIGHT_2         + " TEXT, " +
+                    SPALTE_AXLE_HEIGHT_3         + " TEXT, " +
                     SPALTE_STEERING_PLATE        + " TEXT, " +
                     SPALTE_STEERING_STOP_SPACING + " TEXT, " +
                     SPALTE_CASTER_BLOCK_SPACING  + " TEXT, " +
-                    SPALTE_BALL_STUD_SPACING_1O  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_2O  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_3O  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_AO  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_BO  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_1U  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_2U  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_3U  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_AU  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_BU  + " INTEGER, " +
-                    SPALTE_BALL_STUD_SPACING_CU  + " INTEGER );";
+                    SPALTE_BALL_STUD_SPACING_1O  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_2O  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_3O  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_AO  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_BO  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_1U  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_2U  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_3U  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_AU  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_BU  + " TEXT, " +
+                    SPALTE_BALL_STUD_SPACING_CU  + " TEXT );";
 
 
     public DatenbankHelper(Context context) {

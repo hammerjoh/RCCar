@@ -26,10 +26,10 @@
     <string name="textView_Datum">Datum:</string>
     <string name="textView_Strecke">Strecke:</string>
     <string name="textView_Qualifizierung">Qualifizierung:</string>
-    <string name="textView_Tq">TQ:</string>
+    <string name="textView_Tq">TQ</string>
     <string name="textView_Haupt">Haupt:</string>
     <string name="textView_Ziel">Ziel:</string>
-    <string name="textView_BesteRundenZeit">Beste Runden Zeit:</string>
+    <string name="textView_BesteRundenZeit">Beste Runde:</string>
     <string name="textView_VordereAufhaengung">Vordere Aufhängung:</string>
     <string name="button_Zuruesetzen">Zurücksetzen</string>
     <string name="textView_Fahrhoehe">Fahrhöhe:</string>
@@ -75,10 +75,11 @@
     <string name="cab_löschen">Einträge löschen</string>
     <string name="btn_loeschen">Löschen</string>
     <string name="btn_oeffnen">Öffnen</string>
-    <string name="textView_neuesBlatt">Erstelle neues Blatt</string>
+    <string name="textView_neuesBlatt">Erstelle</string>
     <string name="editText_Dateiname">Dateiname</string>
     <string name="textView_loeschen">Zu löschende Datein auswählen</string>
     <string name="cab_kopieren">Eintrag kopieren</string>
     <string name="btn_filter">Filter</string>
+    <string name="btn_abbruch">Abbrechen</string>
 
 </resources>

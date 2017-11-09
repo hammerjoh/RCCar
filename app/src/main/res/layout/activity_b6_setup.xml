@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.hammer.rccar.ZoomActivity xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="363dp"
+        android:layout_height="551dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@android:color/holo_red_light"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:orientation="horizontal"
+                android:paddingTop="2dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView_Fahrer"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="7"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:text="@string/textView_Fahrer"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Fahrer"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="20"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_Veranstaltung"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="13"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="4dp"
+                    android:text="@string/textView_Veranstaltung"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Veranstaltung"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="59"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView_Datum"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="7"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:text="@string/textView_Datum"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Datum"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_Strecke"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="8"
+                    android:paddingEnd="1dp"
+                    android:paddingStart="4dp"
+                    android:text="@string/textView_Strecke"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Strecke"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="74"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView_Qualifizierung"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="11"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:text="@string/textView_Qualifizierung"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Qualifizierung"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="9"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+
+                <CheckBox
+                    android:id="@+id/checkBox_Tq"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="-10dp"
+                    android:layout_marginStart="-10dp"
+                    android:layout_weight="14"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:text="@string/textView_Tq"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textView_Haupt"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="6"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="0dp"
+                    android:text="@string/textView_Haupt"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Haupt"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="9"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_Ziel"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="5"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="4dp"
+                    android:text="@string/textView_Ziel"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Ziel"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="9"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_BesteRundenZeit"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="15"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="4dp"
+                    android:text="@string/textView_BesteRundenZeit"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_BesteRundenZeit"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="21"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_blue_dark"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView_VordereAufhaengung"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_VordereAufhaengung"
+                android:textSize="8sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="59" />
+
+            <Button
+                android:id="@+id/button_Zuruecksetzen"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="15"
+                android:background="@drawable/edittext_b6"
+                android:gravity="center"
+                android:text="@string/button_Zuruesetzen"
+                android:textSize="6sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_bright"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textView_FahrhoeheV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Fahrhoehe"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_FahrhoeheV"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_SturzV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Sturz"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_SturzV"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Spitze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Spitze"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Spitze"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_ArmTyp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_ArmTyp"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ArmTyp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_TurmTyp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_TurmTyp"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_TurmTyp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Rolleneinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Rolleneinsatz"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Rolleneinsatz"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_SchottTyp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_SchottTyp"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_SchottTyp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_StossWinkel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_StossWinkel"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_StossWinkel"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_ReifenMitnehmerV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_ReifenMitnehmer"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ReifenMitnehmerV"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp">
+
+                    <TextView
+                        android:id="@+id/textView_FSNotizen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_FSNotizen"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_FSNotizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:gravity="top"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark">
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_blue_dark"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView_HintereAufhaengung"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_HintereAufhaengung"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textView_FahrhoeheH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Fahrhoehe"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_FahrhoeheH"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_SturzH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Sturz"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_SturzH"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_ReifenMitnehmerH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_ReifenMitnehmer"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ReifenMitnehmerH"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/rahmen"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp">
+
+                        <TextView
+                            android:id="@+id/textView_Nabenabstand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/textView_Nabenabstand"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="13dp">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingVorne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_marginTop="-10dp"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/textView_Vorne"
+                            android:textSize="6sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingMittel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_marginTop="-10dp"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/textView_Mittel"
+                            android:textSize="6sp" />
+
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingHinten"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_marginTop="-10dp"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/textView_Hinten"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/rahmen"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp">
+
+                        <TextView
+                            android:id="@+id/textView_StossdaempferPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/textView_StossdaempferPosition"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="13dp"
+                        android:weightSum="100">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_DaempferFrontArm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-12dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_weight="50"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/textView_VordererArm"
+                            android:textSize="6sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_DaempferRearArm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginEnd="-13dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_weight="50"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/textView_HintererArm"
+                            android:textSize="6sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp">
+
+                    <TextView
+                        android:id="@+id/textView_RSNotizen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_FSNotizen"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_RSNotizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:gravity="top"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_red_dark">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_blue_dark"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView_Elektronik"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Elektronik"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/textView_Antriebsstrang"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Antriebsstrang"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/textView_Federung"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Federung"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_purple"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textView_Empfaenger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Empfaenger"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Empfaenger"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                    <TextView
+                        android:id="@+id/textView_Servo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Servo"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Servo"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Gas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Gas"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Gas"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                    <TextView
+                        android:id="@+id/textView_Bremse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Bremse"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Bremse"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Regler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Regler"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Regler"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_ReglerEinstellungen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_ReglerEinstellungen"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ReglerEinstellungen"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_blue_dark"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView_StreckenInfo"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_StreckenInfo"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/textView_Reifen"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Reifen"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/textView_KarosseSpoilerGewicht"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="45"
+                android:paddingStart="5dp"
+                android:text="@string/textView_KarosseSpoilerGewicht"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_dark"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rahmen"
+                    android:layout_margin="2dp"
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:id="@+id/textView_Groesse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:paddingStart="4dp"
+                        android:layout_marginTop="-10dp"
+                        android:text="@string/textView_Groesse"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_TrackKlein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-12dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Klein"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_TrackMittel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Mittel"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_TrackGross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Gross"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_TrackExtraGross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-14dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_ExtraGross"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rahmen"
+                    android:layout_margin="2dp"
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:id="@+id/textView_Belag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:paddingStart="4dp"
+                        android:layout_marginTop="-10dp"
+                        android:text="@string/textView_Belag"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_Dreck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-12dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Dreck"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_Teppich"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Teppich"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_Kunstrasen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-10dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_Kunstrasen"
+                        android:textSize="6sp" />
+                    <CheckBox
+                        android:id="@+id/checkBox_MultiBelag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginEnd="-14dp"
+                        android:layout_marginStart="-14dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/textView_MultiBelag"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_blue_dark"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView_FahrzeugKommentare"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="25"
+                android:paddingStart="5dp"
+                android:text="@string/textView_FahrzeugKommentare"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/textView_FahrzeugNotizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_FSNotizen"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_FahrzeugNotizen"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</de.hammer.rccar.ZoomActivity>
