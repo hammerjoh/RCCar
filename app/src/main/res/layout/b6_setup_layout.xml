@@ -51,9 +51,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="52"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="text"
                         android:isScrollContainer="false"
                         android:maxLength="20"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <TextView
@@ -70,8 +72,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="48"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="text"
                         android:maxLength="20"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -97,8 +101,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="30"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="date"
                         android:maxLength="12"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <TextView
@@ -116,14 +122,16 @@
                         android:layout_height="match_parent"
                         android:layout_weight="70"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="text"
                         android:maxLength="25"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <CheckBox
                         android:id="@+id/checkBox_Tq"
                         android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_height="20dp"
                         android:scaleX="0.7"
                         android:scaleY="0.7"
                         android:text="@string/textView_Tq"
@@ -151,8 +159,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="16"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="numberDecimal"
                         android:maxLength="3"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <TextView
@@ -169,8 +179,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="16"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="numberDecimal"
                         android:maxLength="3"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <TextView
@@ -187,8 +199,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="16"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="numberDecimal"
                         android:maxLength="3"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
 
                     <TextView
@@ -205,8 +219,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="52"
                         android:background="@drawable/edittext_b6"
+                        android:inputType="time"
                         android:maxLength="12"
                         android:singleLine="true"
+                        android:textAlignment="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -276,11 +292,13 @@
                         <EditText
                             android:id="@+id/editText_FahrhoeheV"
                             android:layout_width="0dp"
-                            android:layout_weight="22"
                             android:layout_height="match_parent"
+                            android:layout_weight="22"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="5"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                         <TextView
@@ -294,11 +312,13 @@
                         <EditText
                             android:id="@+id/editText_SturzV"
                             android:layout_width="0dp"
-                            android:layout_weight="33"
                             android:layout_height="match_parent"
+                            android:layout_weight="33"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="12"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                         <TextView
@@ -312,16 +332,16 @@
                         <EditText
                             android:id="@+id/editText_Spitze"
                             android:layout_width="0dp"
-                            android:layout_weight="45"
                             android:layout_height="match_parent"
+                            android:layout_weight="45"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="17"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                     </LinearLayout>
-
-
 
 
                     <LinearLayout
@@ -344,8 +364,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="18"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                         <TextView
@@ -359,11 +381,13 @@
                         <EditText
                             android:id="@+id/editText_TurmTyp"
                             android:layout_width="0dp"
-                            android:layout_weight="50"
                             android:layout_height="match_parent"
+                            android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="18"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -386,11 +410,13 @@
                         <EditText
                             android:id="@+id/editText_Rolleneinsatz"
                             android:layout_width="0dp"
-                            android:layout_weight="50"
                             android:layout_height="match_parent"
+                            android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="16"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                         <TextView
@@ -404,11 +430,13 @@
                         <EditText
                             android:id="@+id/editText_SchottTyp"
                             android:layout_width="0dp"
-                            android:layout_weight="50"
                             android:layout_height="match_parent"
+                            android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="16"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -431,11 +459,13 @@
                         <EditText
                             android:id="@+id/editText_StossWinkel"
                             android:layout_width="0dp"
-                            android:layout_weight="50"
                             android:layout_height="match_parent"
+                            android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="14"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                         <TextView
@@ -452,8 +482,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="50"
                             android:background="@drawable/edittext_b6"
+                            android:inputType="text"
                             android:maxLength="14"
                             android:singleLine="true"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -476,10 +508,12 @@
                             android:id="@+id/editText_FSNotizen"
                             android:layout_width="match_parent"
                             android:layout_height="52dp"
-                            android:padding="2dp"
                             android:background="@drawable/edittext_b6"
                             android:gravity="top"
+                            android:inputType="text"
                             android:maxLength="172"
+                            android:padding="2dp"
+                            android:textAlignment="center"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -492,9 +526,9 @@
                     android:background="@drawable/front_suspension">
 
                     <View
+                        android:id="@+id/view"
                         android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:id="@+id/view">
+                        android:layout_height="20dp">
 
                     </View>
 
@@ -509,6 +543,7 @@
                         android:checked="true"
                         android:scaleX="0.5"
                         android:scaleY="0.5" />
+
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="wrap_content"
@@ -548,234 +583,196 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/holo_orange_light"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="12dp"
-                        android:layout_marginTop="2dp">
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:weightSum="90">
 
                         <TextView
                             android:id="@+id/textView_FahrhoeheH"
                             android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_Fahrhoehe"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/editText_FahrhoeheH"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
                             android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp">
+                            android:inputType="text"
+                            android:maxLength="14"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/textView_SturzH"
                             android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_Sturz"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/editText_SturzH"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
                             android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp">
+                            android:inputType="text"
+                            android:maxLength="14"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/textView_ReifenMitnehmerH"
                             android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_ReifenMitnehmer"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/editText_ReifenMitnehmerH"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_marginEnd="2dp"
+                            android:layout_weight="30"
                             android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
+                            android:inputType="text"
+                            android:maxLength="14"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="90">
+
+
+                        <TextView
+                            android:id="@+id/textView_Nabenabstand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/textView_Nabenabstand"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingVorne"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="30"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Vorne"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingMittel"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="30"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Mittel"
+                            android:textSize="12sp" />
+
+
+                        <CheckBox
+                            android:id="@+id/checkBox_SpacingHinten"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="30"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Hinten"
+                            android:textSize="12sp" />
+
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="2dp"
+                        android:layout_margin="2dp"
                         android:background="@drawable/rahmen"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="7dp">
-
-                            <TextView
-                                android:id="@+id/textView_Nabenabstand"
-                                android:layout_width="wrap_content"
-                                android:layout_height="10dp"
-                                android:layout_marginEnd="2dp"
-                                android:layout_marginStart="5dp"
-                                android:text="@string/textView_Nabenabstand"
-                                android:textSize="6sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="13dp">
-
-                            <CheckBox
-                                android:id="@+id/checkBox_SpacingVorne"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="-10dp"
-                                android:layout_marginEnd="-10dp"
-                                android:layout_marginStart="-10dp"
-                                android:layout_marginTop="-10dp"
-                                android:scaleX="0.5"
-                                android:scaleY="0.5"
-                                android:text="@string/textView_Vorne"
-                                android:textSize="6sp" />
-
-                            <CheckBox
-                                android:id="@+id/checkBox_SpacingMittel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="-10dp"
-                                android:layout_marginEnd="-10dp"
-                                android:layout_marginStart="-10dp"
-                                android:layout_marginTop="-10dp"
-                                android:scaleX="0.5"
-                                android:scaleY="0.5"
-                                android:text="@string/textView_Mittel"
-                                android:textSize="6sp" />
+                        android:padding="2dp"
+                        android:weightSum="100">
 
 
-                            <CheckBox
-                                android:id="@+id/checkBox_SpacingHinten"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="-10dp"
-                                android:layout_marginEnd="-10dp"
-                                android:layout_marginStart="-10dp"
-                                android:layout_marginTop="-10dp"
-                                android:scaleX="0.5"
-                                android:scaleY="0.5"
-                                android:text="@string/textView_Hinten"
-                                android:textSize="6sp" />
+                        <TextView
+                            android:id="@+id/textView_StossdaempferPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/textView_StossdaempferPosition"
+                            android:textSize="12sp" />
 
-                        </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/checkBox_DaempferFrontArm"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="50"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_VordererArm"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_DaempferRearArm"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="50"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_HintererArm"
+                            android:textSize="12sp" />
+
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="2dp"
-                        android:background="@drawable/rahmen"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="7dp">
-
-                            <TextView
-                                android:id="@+id/textView_StossdaempferPosition"
-                                android:layout_width="wrap_content"
-                                android:layout_height="10dp"
-                                android:layout_marginEnd="2dp"
-                                android:layout_marginStart="5dp"
-                                android:text="@string/textView_StossdaempferPosition"
-                                android:textSize="6sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="13dp"
-                            android:weightSum="100">
-
-                            <CheckBox
-                                android:id="@+id/checkBox_DaempferFrontArm"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="-10dp"
-                                android:layout_marginEnd="-10dp"
-                                android:layout_marginStart="-12dp"
-                                android:layout_marginTop="-10dp"
-                                android:layout_weight="50"
-                                android:scaleX="0.5"
-                                android:scaleY="0.5"
-                                android:text="@string/textView_VordererArm"
-                                android:textSize="6sp" />
-
-                            <CheckBox
-                                android:id="@+id/checkBox_DaempferRearArm"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="-10dp"
-                                android:layout_marginEnd="-13dp"
-                                android:layout_marginStart="-15dp"
-                                android:layout_marginTop="-10dp"
-                                android:layout_weight="50"
-                                android:scaleX="0.5"
-                                android:scaleY="0.5"
-                                android:text="@string/textView_HintererArm"
-                                android:textSize="6sp" />
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp">
+                        android:padding="2dp">
 
                         <TextView
                             android:id="@+id/textView_RSNotizen"
                             android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_FSNotizen"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/editText_RSNotizen"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:layout_marginEnd="2dp"
+                            android:layout_height="52dp"
                             android:background="@drawable/edittext_b6"
                             android:gravity="top"
-                            android:textSize="6sp" />
+                            android:inputType="text"
+                            android:maxLength="172"
+                            android:padding="2dp"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -819,7 +816,7 @@
                     android:id="@+id/textView_Federung"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="20"
+                    android:layout_weight="25"
                     android:paddingStart="5dp"
                     android:text="@string/textView_Federung"
                     android:textSize="14sp" />
@@ -829,138 +826,132 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@android:color/holo_purple"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="130dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/holo_purple"
-                    android:orientation="vertical">
+                    android:padding="2dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp"
-                        android:layout_marginTop="2dp">
+                    <TextView
+                        android:id="@+id/textView_Empfaenger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Empfaenger"
+                        android:textSize="6sp" />
 
-                        <TextView
-                            android:id="@+id/textView_Empfaenger"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_Empfaenger"
-                            android:textSize="6sp" />
+                    <EditText
+                        android:id="@+id/editText_Empfaenger"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
 
-                        <EditText
-                            android:id="@+id/editText_Empfaenger"
-                            android:layout_width="30dp"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
+                    <TextView
+                        android:id="@+id/textView_Servo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Servo"
+                        android:textSize="6sp" />
 
-                        <TextView
-                            android:id="@+id/textView_Servo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_Servo"
-                            android:textSize="6sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Servo"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp">
-
-                        <TextView
-                            android:id="@+id/textView_Gas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_Gas"
-                            android:textSize="6sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Gas"
-                            android:layout_width="30dp"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-
-                        <TextView
-                            android:id="@+id/textView_Bremse"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_Bremse"
-                            android:textSize="6sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Bremse"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp">
-
-                        <TextView
-                            android:id="@+id/textView_Regler"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_Regler"
-                            android:textSize="6sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Regler"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp">
-
-                        <TextView
-                            android:id="@+id/textView_ReglerEinstellungen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_marginStart="5dp"
-                            android:text="@string/textView_ReglerEinstellungen"
-                            android:textSize="6sp" />
-
-                        <EditText
-                            android:id="@+id/editText_ReglerEinstellungen"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/edittext_b6"
-                            android:textSize="6sp" />
-                    </LinearLayout>
-
+                    <EditText
+                        android:id="@+id/editText_Servo"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Gas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Gas"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Gas"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+
+                    <TextView
+                        android:id="@+id/textView_Bremse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Bremse"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Bremse"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_Regler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_Regler"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Regler"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp">
+
+                    <TextView
+                        android:id="@+id/textView_ReglerEinstellungen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/textView_ReglerEinstellungen"
+                        android:textSize="6sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ReglerEinstellungen"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/edittext_b6"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -1002,153 +993,448 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_dark">
 
                 <LinearLayout
-                    android:layout_width="170dp"
-                    android:layout_height="200dp"
-                    android:background="@android:color/holo_orange_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="24dp"
                         android:layout_margin="2dp"
-                        android:layout_marginTop="2dp"
-                        android:background="@drawable/rahmen">
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp">
 
                         <TextView
                             android:id="@+id/textView_Groesse"
                             android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_marginTop="-10dp"
-                            android:paddingStart="4dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_Groesse"
-                            android:textSize="6sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackKlein"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-12dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
-                            android:text="@string/textView_Klein"
-                            android:textSize="6sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackMittel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
-                            android:text="@string/textView_Mittel"
-                            android:textSize="6sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackGross"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
-                            android:text="@string/textView_Gross"
-                            android:textSize="6sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackExtraGross"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
-                            android:layout_marginEnd="-14dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
-                            android:text="@string/textView_ExtraGross"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="24dp"
                         android:layout_margin="2dp"
-                        android:layout_marginTop="2dp"
-                        android:background="@drawable/rahmen">
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp">
 
                         <TextView
                             android:id="@+id/textView_Belag"
                             android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_marginTop="-10dp"
-                            android:paddingStart="4dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
                             android:text="@string/textView_Belag"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/textView_Traktion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/textView_Traktion"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/textView_Feuchtigkeit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/textView_Feuchtigkeit"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/textView_Bedingungen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/textView_Bedingungen"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
+
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TrackKlein"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Klein"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TrackMittel"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Mittel"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TrackGross"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Gross"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TrackExtraGross"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_ExtraGross"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
 
                         <CheckBox
                             android:id="@+id/checkBox_Dreck"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
                             android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-12dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
                             android:text="@string/textView_Dreck"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <CheckBox
                             android:id="@+id/checkBox_Teppich"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
                             android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
                             android:text="@string/textView_Teppich"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <CheckBox
                             android:id="@+id/checkBox_Kunstrasen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
                             android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
                             android:text="@string/textView_Kunstrasen"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
 
                         <CheckBox
                             android:id="@+id/checkBox_MultiBelag"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="-10dp"
-                            android:layout_marginEnd="-14dp"
-                            android:layout_marginStart="-14dp"
-                            android:layout_marginTop="-10dp"
-                            android:scaleX="0.5"
-                            android:scaleY="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
                             android:text="@string/textView_MultiBelag"
-                            android:textSize="6sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TraktionNiedrig"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Niedrig"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TraktionMittel"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Mittel"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TraktionHoch"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Hoch"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_TraktionSehrHoch"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_SehrHoch"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_FeuchtigkeitTrocken"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Trocken"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_FeuchtigkeitFeucht"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Feucht"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_FeuchtigkeitNass"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Nass"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25">
+
+                        </View>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionDrinnen"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Drinnen"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionDraussen"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Draussen"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionStaubig"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Staubig"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionHart"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Hart"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/rahmen"
+                        android:padding="2dp"
+                        android:weightSum="100">
+
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionHolprig"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Holprig"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionGerillt"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Gerillt"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionGlatt"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Glatt"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_KonditionLahm"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_weight="25"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:text="@string/textView_Lahm"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -1175,25 +1461,29 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:layout_marginTop="2dp">
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/textView_FahrzeugNotizen"
                         android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
                         android:text="@string/textView_FSNotizen"
-                        android:textSize="6sp" />
+                        android:textSize="12sp" />
 
                     <EditText
                         android:id="@+id/editText_FahrzeugNotizen"
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="4dp"
+                        android:layout_height="52dp"
                         android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:maxLength="172"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
                 </LinearLayout>
 
             </LinearLayout>

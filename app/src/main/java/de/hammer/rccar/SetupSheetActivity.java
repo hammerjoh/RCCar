@@ -20,6 +20,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import static de.hammer.rccar.StartActivity.LOG_TAG;
@@ -35,9 +37,9 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
     public String[] chassis1;
     public String chassis;
     public int pos;
+    private String datum;
 
     private Button btn_neu;
-    private Button btn_test;
     private Button btn_filter;
     private ListView lv_gespeicherteSheets;
 
@@ -50,8 +52,6 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
         btn_neu = findViewById(R.id.btn_neu);
         btn_neu.setOnClickListener(this);
-        btn_test = findViewById(R.id.btn_test);
-        btn_test.setOnClickListener(this);
         btn_filter = findViewById(R.id.btn_filter);
         btn_filter.setOnClickListener(this);
 
@@ -82,12 +82,14 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
                     pos = dp_chassis.getSelectedItemPosition();
                     chassis1 = getResources().getStringArray(R.array.chassis);
                     chassis = chassis1[pos];
+                    Calendar aktuellesDatum = Calendar.getInstance();
+                    SimpleDateFormat formatieren = new SimpleDateFormat("dd.MM.yyyy");
+                    datum = formatieren.format(aktuellesDatum.getTime());
 
-                    Datenbank setupTabelle = dataSource.createSheet(dateiname,chassis);
+                    Datenbank setupTabelle = dataSource.createSheet(dateiname, chassis, datum);
                     Log.d(LOG_TAG, "Es wurde der folgende Eintrag in die Datenbank geschrieben:");
                     Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.getSpeichername());
                     showAllListEntries();
-                    dialogInterface.dismiss();
                 }
             }
         });
@@ -95,7 +97,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         myBuilder.setNegativeButton(R.string.btn_abbruch, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
+
             }
         });
 
@@ -129,22 +131,26 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
             }
 
             @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            public boolean onActionItemClicked(final ActionMode mode, MenuItem item) {
                 switch (item.getItemId()) {
-
                     case R.id.cab_loeschen:
-                        SparseBooleanArray markierteEintraege = lv_gespeicherteSheets.getCheckedItemPositions();
-                        for (int i=0; i < markierteEintraege.size(); i++) {
-                            boolean isChecked = markierteEintraege.valueAt(i);
-                            if(isChecked) {
-                                int postitionInListView = markierteEintraege.keyAt(i);
-                                Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(postitionInListView);
-                                Log.d(LOG_TAG, "Position im ListView: " + postitionInListView + " Inhalt: " + setupTabelle.toString());
-                                dataSource.deleteSheet(setupTabelle);
+                        final AlertDialog.Builder myBuilder = new AlertDialog.Builder(SetupSheetActivity.this);
+                        myBuilder.setTitle("Wirklich löschen?").setMessage("Wollen Sie die Ausgewählten Blätter wirklich löschen?").setCancelable(false);
+                        myBuilder.setPositiveButton("Löschen", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                markierteEintraegeLoeschen();
+                                mode.finish();
                             }
-                        }
-                        showAllListEntries();
-                        mode.finish();
+                        });
+                        myBuilder.setNegativeButton("Abbrechen", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                        AlertDialog wirklich = myBuilder.create();
+                        wirklich.show();
                         return true;
 
                     case R.id.cab_kopieren:
@@ -174,13 +180,32 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         if (btn == R.id.btn_filter) {
 
         }
-
-        if (btn == R.id.btn_test){
-            Intent intent = new Intent(SetupSheetActivity.this,B6_SheetActivity.class);
-            startActivity(intent);
-        }
-
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(i);
+        Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.getSpeichername() + ", Chassis: " + setupTabelle.getChassis());
+        //Toast.makeText(getApplicationContext(),"Sie haben auf die Position " + l + " mit dem Namen " + setupTabelle.getSpeichername() + " und dem Chassis " + setupTabelle.getChassis() + " geklickt.",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(SetupSheetActivity.this,B6_SheetActivity.class);
+        intent.putExtra("ID",setupTabelle.getId());
+        startActivity(intent);
+    }
+
+    private void markierteEintraegeLoeschen(){
+        SparseBooleanArray markierteEintraege = lv_gespeicherteSheets.getCheckedItemPositions();
+        for (int i=0; i < markierteEintraege.size(); i++) {
+            boolean isChecked = markierteEintraege.valueAt(i);
+            if(isChecked) {
+                int postitionInListView = markierteEintraege.keyAt(i);
+                Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(postitionInListView);
+                Log.d(LOG_TAG, "Position im ListView: " + postitionInListView + " Inhalt: " + setupTabelle.toString());
+                dataSource.deleteSheet(setupTabelle);
+            }
+        }
+        showAllListEntries();
+    }
+
 
 
     private void showAllListEntries () {
@@ -211,14 +236,4 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         dataSource.close();
     }
 
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(i);
-        Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.getSpeichername() + ", Chassis: " + setupTabelle.getChassis());
-        //Toast.makeText(getApplicationContext(),"Sie haben auf die Position " + l + " mit dem Namen " + setupTabelle.getSpeichername() + " und dem Chassis " + setupTabelle.getChassis() + " geklickt.",Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(SetupSheetActivity.this,B6_SheetActivity.class);
-        intent.putExtra("ID",setupTabelle.getId());
-        startActivity(intent);
-    }
 }

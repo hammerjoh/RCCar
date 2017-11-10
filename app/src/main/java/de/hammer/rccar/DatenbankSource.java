@@ -61,10 +61,11 @@ public class DatenbankSource {
         Log.d(LOG_TAG, "Datenbank mit Hilfe des DbHelpers geschlossen.");
     }
 
-    public Datenbank createSheet(String datei, String chassis) {
+    public Datenbank createSheet(String datei, String chassis, String datum) {
         ContentValues values = new ContentValues();
         values.put(DatenbankHelper.SPALTE_SPEICHERNAME, datei);
-        values.put(DatenbankHelper.SPALTE_CHASSIS,chassis);
+        values.put(DatenbankHelper.SPALTE_CHASSIS, chassis);
+        values.put(DatenbankHelper.SPALTE_DATE, datum);
         Log.d(LOG_TAG, "DATEI!!!! "+datei);
 
         long insertId = database.insert(DatenbankHelper.TABELLE_SETUP_SHEET, null, values);

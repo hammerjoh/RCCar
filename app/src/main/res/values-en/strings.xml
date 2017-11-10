@@ -67,4 +67,21 @@
     <string name="cab_kopieren">copy</string>
     <string name="btn_filter">Filter</string>
     <string name="btn_abbruch">Cancle</string>
+    <string name="textView_Bedingungen">Condition:</string>
+    <string name="textView_Feuchtigkeit">Moisure:</string>
+    <string name="textView_Traktion">Traction:</string>
+    <string name="textView_Draussen">Outdoor</string>
+    <string name="textView_Drinnen">Indoor</string>
+    <string name="textView_Feucht">damp</string>
+    <string name="textView_Gerillt">Grooved</string>
+    <string name="textView_Glatt">Smooth</string>
+    <string name="textView_Hart">Hard Packed</string>
+    <string name="textView_Hoch">High</string>
+    <string name="textView_Holprig">Bumpy</string>
+    <string name="textView_Lahm">Laamy</string>
+    <string name="textView_Nass">Wet</string>
+    <string name="textView_Niedrig">Low</string>
+    <string name="textView_SehrHoch">Very Hight</string>
+    <string name="textView_Staubig">Dusty</string>
+    <string name="textView_Trocken">Dry</string>
 </resources>

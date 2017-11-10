@@ -81,5 +81,22 @@
     <string name="cab_kopieren">Eintrag kopieren</string>
     <string name="btn_filter">Filter</string>
     <string name="btn_abbruch">Abbrechen</string>
+    <string name="textView_Traktion">Traktion:</string>
+    <string name="textView_Feuchtigkeit">Feuchtigkeit:</string>
+    <string name="textView_Bedingungen">Bedingungen:</string>
+    <string name="textView_Niedrig">niedrig</string>
+    <string name="textView_Hoch">hoch</string>
+    <string name="textView_SehrHoch">sehr Hoch</string>
+    <string name="textView_Trocken">trocken</string>
+    <string name="textView_Feucht">feucht</string>
+    <string name="textView_Nass">nass</string>
+    <string name="textView_Drinnen">Drinnen</string>
+    <string name="textView_Draussen">Draußen</string>
+    <string name="textView_Staubig">Staubig</string>
+    <string name="textView_Hart">Hart</string>
+    <string name="textView_Holprig">Holprig</string>
+    <string name="textView_Gerillt">Gerillt</string>
+    <string name="textView_Glatt">Glatt</string>
+    <string name="textView_Lahm">Lahm</string>
 
 </resources>
