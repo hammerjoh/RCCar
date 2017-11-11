@@ -25,13 +25,32 @@ public class Datenbank {
     private String stosswinkel;
     private String reifenmitnehmer;
     private String fsnotizen;
+    /**Rear Suspension**/
+    private String rsnotizen;
+    /**Electronics**/
+
+    /**Drivetrain**/
+    private String asnotizen;
+    /**Slipper Clutch**/
+
+    /**Shocks**/
+    private String fenotizen;
+    /**Track Info**/
+
+    /**Tire**/
+    private String renotizen;
+    /**Body Wing Weight**/
+
+    /**Vehicle Comments**/
+    private String vcnotizen;
 
 
     public Datenbank(long id, String speichername, String chassis, String fahrer, String veranstaltung,
                      String datum, String strecke, String tq, String qualifizierung, String haupt,
                      String ziel, String besterunde, String fahrhoehe_vorne, String sturz_vorne,
                      String spitze, String armtyp, String turmtyp, String rolleneinsatz, String schotttyp,
-                     String stosswinkel, String reifenmitnehmer, String fsnotizen) {
+                     String stosswinkel, String reifenmitnehmer, String fsnotizen, String rsnotizen,
+                     String asnotizen, String fenotizen, String renotizen, String vcnotizen) {
         this.id = id;
         this.speichername = speichername;
         this.chassis = chassis;
@@ -54,6 +73,11 @@ public class Datenbank {
         this.stosswinkel = stosswinkel;
         this.reifenmitnehmer = reifenmitnehmer;
         this.fsnotizen = fsnotizen;
+        this.rsnotizen = rsnotizen;
+        this.asnotizen = asnotizen;
+        this.fenotizen = fenotizen;
+        this.renotizen = renotizen;
+        this.vcnotizen = vcnotizen;
     }
 
 
@@ -209,6 +233,41 @@ public class Datenbank {
     }
     public void setFsnotizen(String fsnotizen) {
         this.fsnotizen = fsnotizen;
+    }
+
+    public String getRsnotizen() {
+        return rsnotizen;
+    }
+    public void setRsnotizen(String rsnotizen) {
+        this.rsnotizen = rsnotizen;
+    }
+
+    public String getAsnotizen() {
+        return asnotizen;
+    }
+    public void setAsnotizen(String asnotizen) {
+        this.asnotizen = asnotizen;
+    }
+
+    public String getFenotizen() {
+        return fenotizen;
+    }
+    public void setFenotizen(String fenotizen) {
+        this.fenotizen = fenotizen;
+    }
+
+    public String getRenotizen() {
+        return renotizen;
+    }
+    public void setRenotizen(String renotizen) {
+        this.renotizen = renotizen;
+    }
+
+    public String getVcnotizen() {
+        return vcnotizen;
+    }
+    public void setVcnotizen(String vcnotizen) {
+        this.vcnotizen = vcnotizen;
     }
 
 /**

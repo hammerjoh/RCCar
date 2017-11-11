@@ -1,6 +1,5 @@
 package de.hammer.rccar;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -40,6 +39,26 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
     private String Stosswinkel;
     private String ReifenMitnehmer_vorne;
     private String FsNotizen;
+    /**Rear Suspension**/
+    private String RsNotizen;
+    /**Electronics**/
+
+    /**Drivetrain**/
+    private String AsNotizen;
+    /**Slipper Clutch**/
+
+    /**Shocks**/
+    private String FeNotizen;
+    /**Track Info**/
+
+    /**Tire**/
+    private String ReNotizen;
+    /**Body Wing Weight**/
+
+    /**Vehicle Comments**/
+    private String VcNotizen;
+
+
 
     /** Textfelder Deklarationen   **/
 
@@ -53,6 +72,7 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
     private EditText eT_Haupt;
     private EditText eT_Ziel;
     private EditText eT_BesteRunde;
+    //Front Suspension
     private EditText eT_Fahrhoehe_vorne;
     private EditText eT_Sturz_vorne;
     private EditText eT_Spitze;
@@ -63,6 +83,25 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
     private EditText eT_Stosswinkel;
     private EditText eT_ReifenMitnehmer_vorne;
     private EditText eT_FsNotizen;
+    //Rear Suspension
+    private EditText eT_RsNotizen;
+    //Electronics
+
+    //Drivetrain
+    private EditText eT_AsNotizen;
+    //Slipper Clutch
+
+    //Shocks
+    private EditText eT_FeNotizen;
+    //Track Info
+
+    //Tire
+    private EditText eT_ReNotizen;
+    //Body Wing Weight
+
+    //Vehicle Comments
+    private EditText eT_VcNotizen;
+
 
 
     public DatenbankSource dataSource;
@@ -111,6 +150,24 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
         eT_Stosswinkel = findViewById(R.id.editText_StossWinkel);
         eT_ReifenMitnehmer_vorne = findViewById(R.id.editText_ReifenMitnehmerV);
         eT_FsNotizen = findViewById(R.id.editText_FSNotizen);
+        /**Rear Suspension**/
+        eT_RsNotizen = findViewById(R.id.editText_RSNotizen);
+        /**Electronics**/
+
+        /**Drivetrain**/
+        eT_AsNotizen = findViewById(R.id.editText_ASNotizen);
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        eT_FeNotizen = findViewById(R.id.editText_FENotizen);
+        /**Track Info**/
+
+        /**Tire**/
+        eT_ReNotizen = findViewById(R.id.editText_RENotizen);
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        eT_VcNotizen = findViewById(R.id.editText_VCNotizen);
     }
 
     private void holeDatenvonDatenbank(){
@@ -136,6 +193,24 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
         Stosswinkel = Blattdaten.getStosswinkel();
         ReifenMitnehmer_vorne = Blattdaten.getReifenmitnehmer();
         FsNotizen = Blattdaten.getFsnotizen();
+        /**Rear Suspension**/
+        RsNotizen = Blattdaten.getRsnotizen();
+        /**Electronics**/
+
+        /**Drivetrain**/
+        AsNotizen = Blattdaten.getAsnotizen();
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        FeNotizen = Blattdaten.getFenotizen();
+        /**Track Info**/
+
+        /**Tire**/
+        ReNotizen = Blattdaten.getRenotizen();
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        VcNotizen = Blattdaten.getVcnotizen();
     }
 
     private void setzeVariablen(){
@@ -160,6 +235,24 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
         eT_Stosswinkel.setText(Stosswinkel);
         eT_ReifenMitnehmer_vorne.setText(ReifenMitnehmer_vorne);
         eT_FsNotizen.setText(FsNotizen);
+        /**Rear Suspension**/
+        eT_RsNotizen.setText(RsNotizen);
+        /**Electronics**/
+
+        /**Drivetrain**/
+        eT_AsNotizen.setText(AsNotizen);
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        eT_FeNotizen.setText(FeNotizen);
+        /**Track Info**/
+
+        /**Tire**/
+        eT_ReNotizen.setText(ReNotizen);
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        eT_VcNotizen.setText(VcNotizen);
     }
 
     private void speicherDateninDatenbank(){
@@ -184,11 +277,30 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
         Stosswinkel = eT_Stosswinkel.getText().toString();
         ReifenMitnehmer_vorne = eT_ReifenMitnehmer_vorne.getText().toString();
         FsNotizen = eT_FsNotizen.getText().toString();
+        /**Rear Suspension**/
+        RsNotizen = eT_RsNotizen.getText().toString();
+        /**Electronics**/
+
+        /**Drivetrain**/
+        AsNotizen = eT_AsNotizen.getText().toString();
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        FeNotizen = eT_FeNotizen.getText().toString();
+        /**Track Info**/
+
+        /**Tire**/
+        ReNotizen = eT_ReNotizen.getText().toString();
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        VcNotizen = eT_VcNotizen.getText().toString();
 
         dataSource.updateDatenbank(ID, Fahrer, Veranstaltung, Datum, Strecke, Tq, Qualifizierung,
                                    Haupt, Ziel, BesteRunde, Fahrhoehe_vorne, Sturz_vorne, Spitze,
                                    ArmTyp, TurmTyp, Rolleneinsatz, SchottTyp, Stosswinkel,
-                                   ReifenMitnehmer_vorne, FsNotizen);
+                                   ReifenMitnehmer_vorne, FsNotizen, RsNotizen, AsNotizen, FeNotizen,
+                                   ReNotizen, VcNotizen);
     }
 
     private void alleFelderZuruecksetzen(){
@@ -213,6 +325,24 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
         eT_Stosswinkel.setText(clear);
         eT_ReifenMitnehmer_vorne.setText(clear);
         eT_FsNotizen.setText(clear);
+        /**Rear Suspension**/
+        eT_RsNotizen.setText(clear);
+        /**Electronics**/
+
+        /**Drivetrain**/
+        eT_AsNotizen.setText(clear);
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        eT_FeNotizen.setText(clear);
+        /**Track Info**/
+
+        /**Tire**/
+        eT_ReNotizen.setText(clear);
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        eT_VcNotizen.setText(clear);
     }
 
     @Override

@@ -40,7 +40,12 @@ public class DatenbankSource {
             DatenbankHelper.SPALTE_BULK_HEAD,
             DatenbankHelper.SPALTE_KICK_UP_ANGLE,
             DatenbankHelper.SPALTE_WHEEL_HEX,
-            DatenbankHelper.SPALTE_FS_NOTES
+            DatenbankHelper.SPALTE_FS_NOTES,
+            DatenbankHelper.SPALTE_RS_NOTES,
+            DatenbankHelper.SPALTE_AS_NOTES,
+            DatenbankHelper.SPALTE_FE_NOTES,
+            DatenbankHelper.SPALTE_RE_NOTES,
+            DatenbankHelper.SPALTE_VC_NOTES
     };
 
 
@@ -104,6 +109,24 @@ public class DatenbankSource {
         int idStosswinkel = cursor.getColumnIndex(DatenbankHelper.SPALTE_KICK_UP_ANGLE);
         int idReifenMitnehmer = cursor.getColumnIndex(DatenbankHelper.SPALTE_WHEEL_HEX);
         int idFsNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_FS_NOTES);
+        /**Rear Suspension**/
+        int idRsNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_RS_NOTES);
+        /**Electronics**/
+
+        /**Drivetrain**/
+        int idAsNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_AS_NOTES);
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        int idFeNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_FE_NOTES);
+        /**Track Info**/
+
+        /**Tire**/
+        int idReNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_RE_NOTES);
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        int idVcNotizen = cursor.getColumnIndex(DatenbankHelper.SPALTE_VC_NOTES);
 
         long id = cursor.getLong(idIndex);
         /**Kopf**/
@@ -129,13 +152,32 @@ public class DatenbankSource {
         String Stosswinkel = cursor.getString(idStosswinkel);
         String ReifenMitnehmer = cursor.getString(idReifenMitnehmer);
         String FsNotizen = cursor.getString(idFsNotizen);
+        /**Rear Suspension**/
+        String RsNotizen = cursor.getString(idRsNotizen);
+        /**Electronics**/
+
+        /**Drivetrain**/
+        String AsNotizen = cursor.getString(idAsNotizen);
+        /**Slipper Clutch**/
+
+        /**Shocks**/
+        String FeNotizen = cursor.getString(idFeNotizen);
+        /**Track Info**/
+
+        /**Tire**/
+        String ReNotizen = cursor.getString(idReNotizen);
+        /**Body Wing Weight**/
+
+        /**Vehicle Comments**/
+        String VcNotizen = cursor.getString(idVcNotizen);
 
 
         Datenbank SetupSheet = new Datenbank(id, dateiname, chassis, fahrer, veranstaltung, datum,
                                              strecke, tq, qualifizierung, haupt, ziel, besterunde,
                                              Fahrhoehe_vorne, Sturz_vorne, Spitze, ArmTyp, TurmTyp,
                                              Rolleneinsatz, SchottTyp, Stosswinkel, ReifenMitnehmer,
-                                             FsNotizen);
+                                             FsNotizen, RsNotizen, AsNotizen, FeNotizen, ReNotizen,
+                                             VcNotizen);
 
         return SetupSheet;
     }
@@ -145,36 +187,36 @@ public class DatenbankSource {
 
         Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET, spalten, null, null, null, null, null);
 
-        cursor.moveToFirst();
+                cursor.moveToFirst();
         Datenbank setupTabelle;
 
+        Log.d(LOG_TAG, "Alle Daten: ");
         while(!cursor.isAfterLast()) {
             setupTabelle = cursorToDatenbank(cursor);
             SetupSheetList.add(setupTabelle);
-            Log.d(LOG_TAG, "Alle Daten: ");
             Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.toString());
             cursor.moveToNext();
         }
-
         cursor.close();
 
         return SetupSheetList;
     }
 
-    public List<Datenbank> filterDatenbank() {
+    public List<Datenbank> filterDatenbank(String name, String chassis) {
         List<Datenbank> gefilterteDaten = new ArrayList<>();
 
-        String[] Suchbegriffe = {"test", "B64"};
+        String[] Suchbegriffe = {"%"+name+"%", "%"+chassis};
+        String Suchauswahl = DatenbankHelper.SPALTE_SPEICHERNAME + " LIKE? AND " + DatenbankHelper.SPALTE_CHASSIS + " LIKE?";
 
-        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET, spalten, DatenbankHelper.SPALTE_SPEICHERNAME + "=? AND " + DatenbankHelper.SPALTE_CHASSIS + "=?", Suchbegriffe, null, null, null);
+        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET, spalten, Suchauswahl, Suchbegriffe, null, null, null);
 
         cursor.moveToFirst();
         Datenbank gefundeneSheets;
 
+        Log.d(LOG_TAG, "Gefilterte Daten: ");
         while(!cursor.isAfterLast()) {
             gefundeneSheets = cursorToDatenbank(cursor);
             gefilterteDaten.add(gefundeneSheets);
-            Log.d(LOG_TAG, "Gefilterte Daten: ");
             Log.d(LOG_TAG, "ID: " + gefundeneSheets.getId() + ", Inhalt: " + gefundeneSheets.toString());
             cursor.moveToNext();
         }
@@ -191,7 +233,8 @@ public class DatenbankSource {
                                      String newFahrhoehe_vorne, String newSturz_vorne, String newSpitze,
                                      String newArmTyp, String newTurmTyp, String newRolleneinsatz,
                                      String newSchottTyp, String newStosswinkel, String newReifenMitnehmer_vorne,
-                                     String newFsNotizen) {
+                                     String newFsNotizen, String newRsNotizen, String newAsNotizen,
+                                     String newFeNotizen, String newReNotizen, String newVcNotizen) {
         ContentValues Werte = new ContentValues();
         Werte.put(DatenbankHelper.SPALTE_DRIVER, newFahrer);
         Werte.put(DatenbankHelper.SPALTE_EVENT, newVeranstaltung);
@@ -212,6 +255,11 @@ public class DatenbankSource {
         Werte.put(DatenbankHelper.SPALTE_KICK_UP_ANGLE, newStosswinkel);
         Werte.put(DatenbankHelper.SPALTE_WHEEL_HEX, newReifenMitnehmer_vorne);
         Werte.put(DatenbankHelper.SPALTE_FS_NOTES, newFsNotizen);
+        Werte.put(DatenbankHelper.SPALTE_RS_NOTES, newRsNotizen);
+        Werte.put(DatenbankHelper.SPALTE_AS_NOTES, newAsNotizen);
+        Werte.put(DatenbankHelper.SPALTE_FE_NOTES, newFeNotizen);
+        Werte.put(DatenbankHelper.SPALTE_RE_NOTES, newReNotizen);
+        Werte.put(DatenbankHelper.SPALTE_VC_NOTES, newVcNotizen);
 
         database.update(DatenbankHelper.TABELLE_SETUP_SHEET, Werte,DatenbankHelper.SPALTE_ID + "=" + id,null);
 

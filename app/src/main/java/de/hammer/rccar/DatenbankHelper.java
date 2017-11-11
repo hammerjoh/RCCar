@@ -64,6 +64,24 @@ public class DatenbankHelper extends SQLiteOpenHelper{
     public static final String SPALTE_BALL_STUD_SPACING_AU  = "ball_stud_spacing_au";
     public static final String SPALTE_BALL_STUD_SPACING_BU  = "ball_stud_spacing_bu";
     public static final String SPALTE_BALL_STUD_SPACING_CU  = "ball_stud_spacing_cu";
+    //Rear Suspension
+    public static final String SPALTE_RS_NOTES              = "rs_notes";
+    //Electronics
+
+    //Drivetrain
+    public static final String SPALTE_AS_NOTES              = "as_notes";
+    //Slipper Clutch
+
+    //Shocks
+    public static final String SPALTE_FE_NOTES              = "fe_notes";
+    //Track Info
+
+    //Tire
+    public static final String SPALTE_RE_NOTES              = "re_notes";
+    //Body Wing Weight
+
+    //Vehicle Comments
+    public static final String SPALTE_VC_NOTES              = "vc_notes";
 
     /**   SQL String   **/
 
@@ -114,7 +132,12 @@ public class DatenbankHelper extends SQLiteOpenHelper{
                     SPALTE_BALL_STUD_SPACING_3U  + " TEXT, " +
                     SPALTE_BALL_STUD_SPACING_AU  + " TEXT, " +
                     SPALTE_BALL_STUD_SPACING_BU  + " TEXT, " +
-                    SPALTE_BALL_STUD_SPACING_CU  + " TEXT );";
+                    SPALTE_BALL_STUD_SPACING_CU  + " TEXT, " +
+                    SPALTE_RS_NOTES              + " TEXT, " +
+                    SPALTE_AS_NOTES              + " TEXT, " +
+                    SPALTE_FE_NOTES              + " TEXT, " +
+                    SPALTE_RE_NOTES              + " TEXT, " +
+                    SPALTE_VC_NOTES              + " TEXT);";
 
 
     public DatenbankHelper(Context context) {

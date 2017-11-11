@@ -84,4 +84,7 @@
     <string name="textView_SehrHoch">Very Hight</string>
     <string name="textView_Staubig">Dusty</string>
     <string name="textView_Trocken">Dry</string>
+    <string name="textView_Filter">Search:</string>
+    <string name="textView_Anwenden">Apply</string>
+    <string name="textView_Kupplung">Slipper Clutch:</string>
 </resources>

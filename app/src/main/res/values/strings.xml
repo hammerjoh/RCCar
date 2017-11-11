@@ -14,6 +14,7 @@
     </string-array>
 
     <string-array name="chassis">
+        <item>Alle</item>
         <item>B6</item>
         <item>B64</item>
     </string-array>
@@ -98,5 +99,8 @@
     <string name="textView_Gerillt">Gerillt</string>
     <string name="textView_Glatt">Glatt</string>
     <string name="textView_Lahm">Lahm</string>
+    <string name="textView_Filter">Suchen:</string>
+    <string name="textView_Anwenden">Anwenden</string>
+    <string name="textView_Kupplung">Rutschkupplung:</string>
 
 </resources>

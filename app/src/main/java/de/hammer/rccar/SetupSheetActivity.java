@@ -21,6 +21,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -33,29 +35,30 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
     public DatenbankSource dataSource;
 
-    public String dateiname;
-    public String[] chassis1;
-    public String chassis;
-    public int pos;
+    private int pos;
+    private String suchdateiname;
+    private String suchchassis;
+    private String dateiname;
+    private String chassis;
     private String datum;
 
-    private Button btn_neu;
-    private Button btn_filter;
     private ListView lv_gespeicherteSheets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(LOG_TAG, "FEHLERSUCHE!!!");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_sheet);
 
         dataSource = new DatenbankSource(this);
 
-        btn_neu = findViewById(R.id.btn_neu);
+        Button btn_neu = findViewById(R.id.btn_neu);
         btn_neu.setOnClickListener(this);
-        btn_filter = findViewById(R.id.btn_filter);
+        Button btn_filter = findViewById(R.id.btn_filter);
         btn_filter.setOnClickListener(this);
 
         initCAB();
+        Log.d(LOG_TAG, "FEHLERSUCHE!!!");
 
     }
 
@@ -67,7 +70,9 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         final EditText et_dateiname = myView.findViewById(R.id.editText_Dateiname);
 
         final Spinner dp_chassis = myView.findViewById(R.id.dp_Chassis);
-        ArrayAdapter<String> chassisadapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.chassis));
+        ArrayList<String> liste = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.chassis)));
+        liste.remove(0);
+        ArrayAdapter<String> chassisadapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,liste);
         chassisadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dp_chassis.setAdapter(chassisadapter);
 
@@ -79,8 +84,8 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
                 }
                 else {
                     dateiname = et_dateiname.getText().toString();
-                    pos = dp_chassis.getSelectedItemPosition();
-                    chassis1 = getResources().getStringArray(R.array.chassis);
+                    pos = dp_chassis.getSelectedItemPosition()+1;
+                    String[] chassis1 = getResources().getStringArray(R.array.chassis);
                     chassis = chassis1[pos];
                     Calendar aktuellesDatum = Calendar.getInstance();
                     SimpleDateFormat formatieren = new SimpleDateFormat("dd.MM.yyyy");
@@ -179,7 +184,34 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         }
 
         if (btn == R.id.btn_filter) {
-            Filter();
+            final AlertDialog.Builder myBuilder = new AlertDialog.Builder(this);
+            View myView = getLayoutInflater().inflate(R.layout.dialog_filter,null);
+            myBuilder.setView(myView).setCancelable(true).setTitle(R.string.textView_Filter);
+
+            final EditText et_suchdateiname = myView.findViewById(R.id.editText_Suchdateiname);
+
+            final Spinner dp_chassis = myView.findViewById(R.id.dp_Suchchassis);
+            ArrayAdapter<String> chassisadapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.chassis));
+            chassisadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            dp_chassis.setAdapter(chassisadapter);
+
+            myBuilder.setPositiveButton(R.string.textView_Anwenden, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    suchdateiname = et_suchdateiname.getText().toString();
+                    pos = dp_chassis.getSelectedItemPosition();
+                    if (pos==0) {
+                        suchchassis = "";
+                    }
+                    else {
+                        String[] chassis2 = getResources().getStringArray(R.array.chassis);
+                        suchchassis = chassis2[pos];
+                    }
+                    Filter(suchdateiname, suchchassis);
+                }
+            });
+            AlertDialog neuesBlatt = myBuilder.create();
+            neuesBlatt.show();
         }
     }
 
@@ -187,7 +219,6 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Datenbank setupTabelle = (Datenbank) lv_gespeicherteSheets.getItemAtPosition(i);
         Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.getSpeichername() + ", Chassis: " + setupTabelle.getChassis());
-        //Toast.makeText(getApplicationContext(),"Sie haben auf die Position " + l + " mit dem Namen " + setupTabelle.getSpeichername() + " und dem Chassis " + setupTabelle.getChassis() + " geklickt.",Toast.LENGTH_LONG).show();
         Intent intent = new Intent(SetupSheetActivity.this,B6_SheetActivity.class);
         intent.putExtra("ID",setupTabelle.getId());
         startActivity(intent);
@@ -208,9 +239,9 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
     }
 
 
-    private void Filter() {
-        List<Datenbank> gefilterteSheetsList = dataSource.filterDatenbank();
-        ArrayAdapter<Datenbank> gefiltertAdapter = new ArrayAdapter<Datenbank>(this, R.layout.test_listview, gefilterteSheetsList);
+    private void Filter(String name, String chassis) {
+        List<Datenbank> gefilterteSheetsList = dataSource.filterDatenbank(name,chassis);
+        ArrayAdapter<Datenbank> gefiltertAdapter = new ArrayAdapter<>(this, R.layout.listview_deletable, gefilterteSheetsList);
 
         lv_gespeicherteSheets = findViewById(R.id.listview_saved_sheets);
         lv_gespeicherteSheets.setAdapter(gefiltertAdapter);
@@ -219,7 +250,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
     private void showAllListEntries () {
         List<Datenbank> savedSheetsList = dataSource.getAllSavedSheets();
-        ArrayAdapter<Datenbank> setupSheetsArrayAdapter = new ArrayAdapter<> (this, R.layout.test_listview, savedSheetsList);
+        ArrayAdapter<Datenbank> setupSheetsArrayAdapter = new ArrayAdapter<> (this, R.layout.listview_deletable, savedSheetsList);
 
         lv_gespeicherteSheets = findViewById(R.id.listview_saved_sheets);
         lv_gespeicherteSheets.setAdapter(setupSheetsArrayAdapter);
