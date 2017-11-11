@@ -135,6 +135,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
                 switch (item.getItemId()) {
                     case R.id.cab_loeschen:
                         final AlertDialog.Builder myBuilder = new AlertDialog.Builder(SetupSheetActivity.this);
+                        //TODO Hardcoded Texte in Strings umwandeln
                         myBuilder.setTitle("Wirklich löschen?").setMessage("Wollen Sie die Ausgewählten Blätter wirklich löschen?").setCancelable(false);
                         myBuilder.setPositiveButton("Löschen", new DialogInterface.OnClickListener() {
                             @Override
@@ -178,7 +179,7 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         }
 
         if (btn == R.id.btn_filter) {
-
+            Filter();
         }
     }
 
@@ -206,6 +207,14 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         showAllListEntries();
     }
 
+
+    private void Filter() {
+        List<Datenbank> gefilterteSheetsList = dataSource.filterDatenbank();
+        ArrayAdapter<Datenbank> gefiltertAdapter = new ArrayAdapter<Datenbank>(this, R.layout.test_listview, gefilterteSheetsList);
+
+        lv_gespeicherteSheets = findViewById(R.id.listview_saved_sheets);
+        lv_gespeicherteSheets.setAdapter(gefiltertAdapter);
+    }
 
 
     private void showAllListEntries () {

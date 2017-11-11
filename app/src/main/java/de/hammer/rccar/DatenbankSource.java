@@ -70,7 +70,7 @@ public class DatenbankSource {
 
         long insertId = database.insert(DatenbankHelper.TABELLE_SETUP_SHEET, null, values);
 
-        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET,spalten, DatenbankHelper.SPALTE_ID + "=" + insertId,null, null, null, null);
+        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET, spalten, DatenbankHelper.SPALTE_ID + "=" + insertId,null, null, null, null);
 
         cursor.moveToFirst();
         Datenbank Datenbank = cursorToDatenbank(cursor);
@@ -151,6 +151,7 @@ public class DatenbankSource {
         while(!cursor.isAfterLast()) {
             setupTabelle = cursorToDatenbank(cursor);
             SetupSheetList.add(setupTabelle);
+            Log.d(LOG_TAG, "Alle Daten: ");
             Log.d(LOG_TAG, "ID: " + setupTabelle.getId() + ", Inhalt: " + setupTabelle.toString());
             cursor.moveToNext();
         }
@@ -159,6 +160,30 @@ public class DatenbankSource {
 
         return SetupSheetList;
     }
+
+    public List<Datenbank> filterDatenbank() {
+        List<Datenbank> gefilterteDaten = new ArrayList<>();
+
+        String[] Suchbegriffe = {"test", "B64"};
+
+        Cursor cursor = database.query(DatenbankHelper.TABELLE_SETUP_SHEET, spalten, DatenbankHelper.SPALTE_SPEICHERNAME + "=? AND " + DatenbankHelper.SPALTE_CHASSIS + "=?", Suchbegriffe, null, null, null);
+
+        cursor.moveToFirst();
+        Datenbank gefundeneSheets;
+
+        while(!cursor.isAfterLast()) {
+            gefundeneSheets = cursorToDatenbank(cursor);
+            gefilterteDaten.add(gefundeneSheets);
+            Log.d(LOG_TAG, "Gefilterte Daten: ");
+            Log.d(LOG_TAG, "ID: " + gefundeneSheets.getId() + ", Inhalt: " + gefundeneSheets.toString());
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+
+        return gefilterteDaten;
+    }
+
 
     public Datenbank updateDatenbank(long id, String newFahrer, String newVeranstaltung, String newDatum,
                                      String newStrecke, String newTq, String newQualifizierung,
