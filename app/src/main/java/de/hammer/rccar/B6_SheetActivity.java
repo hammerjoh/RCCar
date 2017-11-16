@@ -3,11 +3,15 @@ package de.hammer.rccar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ScrollView;
 
 import static de.hammer.rccar.StartActivity.LOG_TAG;
 import static java.lang.String.valueOf;
@@ -111,20 +115,11 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_b6_setup);
         setContentView(R.layout.b6_setup_layout);
 
 
         ID = getIntent().getExtras().getLong("ID");
 
-        final ZoomActivity zoomLayout = findViewById(R.id.zoom_layout);
-        zoomLayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                zoomLayout.init(B6_SheetActivity.this);
-                return false;
-            }
-        });
 
         dataSource = new DatenbankSource(this);
         /**Kopf**/
@@ -369,4 +364,5 @@ public class B6_SheetActivity extends AppCompatActivity implements View.OnClickL
             alleFelderZuruecksetzen();
         }
     }
+
 }

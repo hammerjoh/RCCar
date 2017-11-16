@@ -1,664 +1,684 @@
 <?xml version="1.0" encoding="utf-8"?>
-<de.hammer.rccar.ZoomActivity xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/zoom_layout"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
+            android:background="@android:color/holo_red_light"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_red_light"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="2dp"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:id="@+id/textView_Fahrer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_Fahrer"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Fahrer"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="52"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="text"
-                        android:isScrollContainer="false"
-                        android:maxLength="20"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Veranstaltung"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_Veranstaltung"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Veranstaltung"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="48"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="text"
-                        android:maxLength="20"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:id="@+id/textView_Datum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-1dp"
-                        android:padding="2dp"
-                        android:text="@string/textView_Datum"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Datum"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="30"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="date"
-                        android:maxLength="12"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Strecke"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-1dp"
-                        android:padding="2dp"
-                        android:text="@string/textView_Strecke"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Strecke"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="70"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="text"
-                        android:maxLength="27"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox_Tq"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp"
-                        android:scaleX="0.7"
-                        android:scaleY="0.7"
-                        android:text="@string/textView_Tq"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:id="@+id/textView_Qualifizierung"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_Qualifizierung"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Qualifizierung"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="16"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="numberDecimal"
-                        android:maxLength="3"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Haupt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_Haupt"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Haupt"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="16"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="numberDecimal"
-                        android:maxLength="3"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Ziel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_Ziel"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Ziel"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="16"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="numberDecimal"
-                        android:maxLength="3"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView_BesteRundenZeit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_BesteRundenZeit"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_BesteRundenZeit"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="52"
-                        android:background="@drawable/edittext_b6"
-                        android:inputType="time"
-                        android:maxLength="12"
-                        android:singleLine="true"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:background="@android:color/holo_blue_dark"
+                android:orientation="horizontal"
                 android:padding="2dp"
-                android:weightSum="90">
+                android:weightSum="100">
 
                 <TextView
-                    android:id="@+id/textView_VordereAufhaengung"
-                    android:layout_width="0dp"
+                    android:id="@+id/textView_Fahrer"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="40"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_VordereAufhaengung"
-                    android:textSize="14sp" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="25"></View>
-
-
-                <Button
-                    android:id="@+id/button_Zuruecksetzen"
-                    android:layout_width="0dp"
-                    android:layout_height="21dp"
-                    android:layout_weight="25"
-                    android:background="@drawable/edittext_b6"
-                    android:ems="8"
-                    android:gravity="center"
-                    android:text="@string/button_Zuruesetzen"
+                    android:padding="2dp"
+                    android:text="@string/textView_Fahrer"
                     android:textSize="12sp" />
 
+                <EditText
+                    android:id="@+id/editText_Fahrer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="52"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="text"
+                    android:isScrollContainer="false"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView_Veranstaltung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_Veranstaltung"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Veranstaltung"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="48"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView_Datum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:padding="2dp"
+                    android:text="@string/textView_Datum"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Datum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="date"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView_Strecke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:padding="2dp"
+                    android:text="@string/textView_Strecke"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Strecke"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="text"
+                    android:maxLength="27"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_Tq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:text="@string/textView_Tq"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView_Qualifizierung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_Qualifizierung"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Qualifizierung"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView_Haupt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_Haupt"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Haupt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView_Ziel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_Ziel"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_Ziel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView_BesteRundenZeit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_BesteRundenZeit"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_BesteRundenZeit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="52"
+                    android:background="@drawable/edittext_b6"
+                    android:inputType="time"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp"
+            android:weightSum="90">
+
+            <TextView
+                android:id="@+id/textView_VordereAufhaengung"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:paddingStart="5dp"
+                android:text="@string/textView_VordereAufhaengung"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"></View>
+
+
+            <Button
+                android:id="@+id/button_Zuruecksetzen"
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_weight="25"
+                android:background="@drawable/edittext_b6"
+                android:ems="8"
+                android:gravity="center"
+                android:text="@string/button_Zuruesetzen"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_bright"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_FahrhoeheV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Fahrhoehe"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_FahrhoeheV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="22"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView_SturzV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Sturz"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_SturzV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="33"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView_Spitze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Spitze"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Spitze"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="17"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/holo_blue_bright"
-                    android:orientation="vertical">
+                    android:padding="2dp"
+                    android:weightSum="100">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView_ArmTyp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
-                        android:weightSum="100">
+                        android:text="@string/textView_ArmTyp"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView_FahrhoeheV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Fahrhoehe"
-                            android:textSize="12sp" />
+                    <EditText
+                        android:id="@+id/editText_ArmTyp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
-                        <EditText
-                            android:id="@+id/editText_FahrhoeheV"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="22"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="5"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/textView_SturzV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Sturz"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_SturzV"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="33"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="12"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/textView_Spitze"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Spitze"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Spitze"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="45"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="17"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView_TurmTyp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
-                        android:weightSum="100">
+                        android:text="@string/textView_TurmTyp"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView_ArmTyp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_ArmTyp"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_ArmTyp"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="18"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/textView_TurmTyp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_TurmTyp"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_TurmTyp"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="18"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:weightSum="100">
-
-                        <TextView
-                            android:id="@+id/textView_Rolleneinsatz"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Rolleneinsatz"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_Rolleneinsatz"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="16"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/textView_SchottTyp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_SchottTyp"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_SchottTyp"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="16"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:weightSum="100">
-
-                        <TextView
-                            android:id="@+id/textView_StossWinkel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_StossWinkel"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_StossWinkel"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="14"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/textView_ReifenMitnehmerV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_ReifenMitnehmer"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_ReifenMitnehmerV"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="14"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_FSNotizen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_FSNotizen"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_FSNotizen"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:background="@drawable/edittext_b6"
-                            android:gravity="top"
-                            android:inputType="text"
-                            android:maxLength="172"
-                            android:padding="2dp"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/editText_TurmTyp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/front_suspension">
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_Rolleneinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Rolleneinsatz"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Rolleneinsatz"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView_SchottTyp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_SchottTyp"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_SchottTyp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_StossWinkel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_StossWinkel"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_StossWinkel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView_ReifenMitnehmerV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_ReifenMitnehmer"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_ReifenMitnehmerV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/textView_FSNotizen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_FSNotizen"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editText_FSNotizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/edittext_b6"
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:maxLength="172"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fs1">
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fs2">
 
 
                 </RelativeLayout>
 
-
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
+                android:background="@drawable/fs3">
 
-                <TextView
-                    android:id="@+id/textView_HintereAufhaengung"
+                <RadioButton
+                    android:id="@+id/radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_HintereAufhaengung"
-                    android:textSize="14sp" />
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="194dp"
+                    android:checked="true" />
+            </RelativeLayout>
 
-            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_HintereAufhaengung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_HintereAufhaengung"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/holo_orange_light"
-                    android:orientation="vertical">
+                    android:padding="2dp"
+                    android:weightSum="90">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView_FahrhoeheH"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
-                        android:weightSum="90">
+                        android:text="@string/textView_Fahrhoehe"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView_FahrhoeheH"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Fahrhoehe"
-                            android:textSize="12sp" />
+                    <EditText
+                        android:id="@+id/editText_FahrhoeheH"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
-                        <EditText
-                            android:id="@+id/editText_FahrhoeheH"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="14"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/textView_SturzH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Sturz"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView_SturzH"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Sturz"
-                            android:textSize="12sp" />
+                    <EditText
+                        android:id="@+id/editText_SturzH"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
-                        <EditText
-                            android:id="@+id/editText_SturzH"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="14"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/textView_ReifenMitnehmerH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_ReifenMitnehmer"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView_ReifenMitnehmerH"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_ReifenMitnehmer"
-                            android:textSize="12sp" />
+                    <EditText
+                        android:id="@+id/editText_ReifenMitnehmerH"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="30"
+                        android:background="@drawable/edittext_b6"
+                        android:inputType="text"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
-                        <EditText
-                            android:id="@+id/editText_ReifenMitnehmerH"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="30"
-                            android:background="@drawable/edittext_b6"
-                            android:inputType="text"
-                            android:maxLength="14"
-                            android:singleLine="true"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
+                </LinearLayout>
 
 
-                    <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/textView_Nabenabstand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_Nabenabstand"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp"
+                        android:orientation="horizontal"
                         android:weightSum="90">
 
-
-                        <TextView
-                            android:id="@+id/textView_Nabenabstand"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Nabenabstand"
-                            android:textSize="12sp" />
-
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/checkBox_SpacingVorne"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Vorne"
                             android:textSize="12sp" />
 
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/checkBox_SpacingMittel"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
@@ -666,119 +686,71 @@
                             android:textSize="12sp" />
 
 
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/checkBox_SpacingHinten"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Hinten"
                             android:textSize="12sp" />
+                    </RadioGroup>
 
 
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/textView_StossdaempferPosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/textView_StossdaempferPosition"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp"
+                        android:orientation="horizontal"
                         android:weightSum="100">
 
-
-                        <TextView
-                            android:id="@+id/textView_StossdaempferPosition"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_StossdaempferPosition"
-                            android:textSize="12sp" />
-
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/checkBox_DaempferFrontArm"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="50"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_VordererArm"
                             android:textSize="12sp" />
 
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/checkBox_DaempferRearArm"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="50"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_HintererArm"
                             android:textSize="12sp" />
+                    </RadioGroup>
 
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_RSNotizen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_FSNotizen"
-                            android:textSize="12sp" />
-
-                        <EditText
-                            android:id="@+id/editText_RSNotizen"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:background="@drawable/edittext_b6"
-                            android:gravity="top"
-                            android:inputType="text"
-                            android:maxLength="172"
-                            android:padding="2dp"
-                            android:textAlignment="center"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:background="@drawable/rear_suspension">
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_Elektronik"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_Elektronik"
-                    android:textSize="14sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_purple"
-                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -786,156 +758,7 @@
                     android:padding="2dp">
 
                     <TextView
-                        android:id="@+id/textView_Empfaenger"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_Empfaenger"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Empfaenger"
-                        android:layout_width="30dp"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Servo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_Servo"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Servo"
-                        android:layout_width="30dp"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp">
-
-                    <TextView
-                        android:id="@+id/textView_Gas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_Gas"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Gas"
-                        android:layout_width="30dp"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-
-                    <TextView
-                        android:id="@+id/textView_Bremse"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_Bremse"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Bremse"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp">
-
-                    <TextView
-                        android:id="@+id/textView_Regler"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_Regler"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_Regler"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp">
-
-                    <TextView
-                        android:id="@+id/textView_ReglerEinstellungen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/textView_ReglerEinstellungen"
-                        android:textSize="6sp" />
-
-                    <EditText
-                        android:id="@+id/editText_ReglerEinstellungen"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginEnd="2dp"
-                        android:background="@drawable/edittext_b6"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_Antriebsstrang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_Antriebsstrang"
-                    android:textSize="14sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorError"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp">
-
-                    <TextView
-                        android:id="@+id/textView_ASNotizen"
+                        android:id="@+id/textView_RSNotizen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
@@ -943,7 +766,7 @@
                         android:textSize="12sp" />
 
                     <EditText
-                        android:id="@+id/editText_ASNotizen"
+                        android:id="@+id/editText_RSNotizen"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:background="@drawable/edittext_b6"
@@ -958,415 +781,603 @@
 
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rear_suspension">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_Elektronik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Elektronik"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
                 android:padding="2dp">
 
                 <TextView
-                    android:id="@+id/textView_Kupplung"
+                    android:id="@+id/textView_Empfaenger"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_Kupplung"
-                    android:textSize="14sp" />
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_Empfaenger"
+                    android:textSize="6sp" />
 
+                <EditText
+                    android:id="@+id/editText_Empfaenger"
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_Servo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_Servo"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Servo"
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/colorEigene"
-                android:orientation="vertical">
+                android:layout_height="12dp">
 
+                <TextView
+                    android:id="@+id/textView_Gas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_Gas"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Gas"
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/textView_Bremse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_Bremse"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Bremse"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp">
+
+                <TextView
+                    android:id="@+id/textView_Regler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_Regler"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_Regler"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp">
+
+                <TextView
+                    android:id="@+id/textView_ReglerEinstellungen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textView_ReglerEinstellungen"
+                    android:textSize="6sp" />
+
+                <EditText
+                    android:id="@+id/editText_ReglerEinstellungen"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/edittext_b6"
+                    android:textSize="6sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_Antriebsstrang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Antriebsstrang"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorError"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
                 android:padding="2dp">
 
                 <TextView
-                    android:id="@+id/textView_Federung"
+                    android:id="@+id/textView_ASNotizen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_Federung"
-                    android:textSize="14sp" />
+                    android:padding="2dp"
+                    android:text="@string/textView_FSNotizen"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_ASNotizen"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/edittext_b6"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:maxLength="172"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_Kupplung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Kupplung"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorEigene"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_Federung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Federung"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorAccent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/colorAccent"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textView_FENotizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_FSNotizen"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_FENotizen"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/edittext_b6"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:maxLength="172"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_StreckenInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingStart="5dp"
+                android:text="@string/textView_StreckenInfo"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp">
+                    android:layout_height="24dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp"
+                    android:weightSum="100">
 
                     <TextView
-                        android:id="@+id/textView_FENotizen"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView_Groesse"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="22"
                         android:padding="2dp"
-                        android:text="@string/textView_FSNotizen"
+                        android:text="@string/textView_Groesse"
                         android:textSize="12sp" />
 
-                    <EditText
-                        android:id="@+id/editText_FENotizen"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:background="@drawable/edittext_b6"
-                        android:gravity="top"
-                        android:inputType="text"
-                        android:maxLength="172"
-                        android:padding="2dp"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_StreckenInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_StreckenInfo"
-                    android:textSize="14sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_orange_dark">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_Groesse"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Groesse"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_Belag"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Belag"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_Traktion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Traktion"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_Feuchtigkeit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Feuchtigkeit"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:padding="2dp">
-
-                        <TextView
-                            android:id="@+id/textView_Bedingungen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="2dp"
-                            android:text="@string/textView_Bedingungen"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="78"
+                        android:orientation="horizontal"
                         android:weightSum="100">
 
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackKlein"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TrackKlein"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="22"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Klein"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackMittel"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TrackMittel"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="23"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Mittel"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackGross"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TrackGross"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="25"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Gross"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TrackExtraGross"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TrackExtraGross"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_ExtraGross"
                             android:textSize="12sp" />
-                    </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_Belag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="22"
+                        android:padding="2dp"
+                        android:text="@string/textView_Belag"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="78"
+                        android:orientation="horizontal"
                         android:weightSum="100">
 
-                        <CheckBox
-                            android:id="@+id/checkBox_Dreck"
+                        <RadioButton
+                            android:id="@+id/RadioButton_Dreck"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="22"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Dreck"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_Teppich"
+                        <RadioButton
+                            android:id="@+id/RadioButton_Teppich"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="23"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Teppich"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_Kunstrasen"
+                        <RadioButton
+                            android:id="@+id/RadioButton_Kunstrasen"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="25"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Kunstrasen"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_MultiBelag"
+                        <RadioButton
+                            android:id="@+id/RadioButton_MultiBelag"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_MultiBelag"
                             android:textSize="12sp" />
-                    </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_Traktion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="22"
+                        android:padding="2dp"
+                        android:text="@string/textView_Traktion"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="78"
+                        android:orientation="horizontal"
                         android:weightSum="100">
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TraktionNiedrig"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TraktionNiedrig"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="22"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Niedrig"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TraktionMittel"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TraktionMittel"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="23"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Mittel"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TraktionHoch"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TraktionHoch"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="25"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Hoch"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_TraktionSehrHoch"
+                        <RadioButton
+                            android:id="@+id/RadioButton_TraktionSehrHoch"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="30"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_SehrHoch"
                             android:textSize="12sp" />
-                    </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:padding="2dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/textView_Feuchtigkeit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="22"
+                        android:padding="2dp"
+                        android:text="@string/textView_Feuchtigkeit"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="78"
+                        android:orientation="horizontal"
                         android:weightSum="100">
 
-                        <CheckBox
-                            android:id="@+id/checkBox_FeuchtigkeitTrocken"
+                        <RadioButton
+                            android:id="@+id/RadioButton_FeuchtigkeitTrocken"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
                             android:layout_weight="22"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Trocken"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_FeuchtigkeitFeucht"
+                        <RadioButton
+                            android:id="@+id/RadioButton_FeuchtigkeitFeucht"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="23"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Feucht"
                             android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_FeuchtigkeitNass"
+                        <RadioButton
+                            android:id="@+id/RadioButton_FeuchtigkeitNass"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="25"
                             android:scaleX="0.7"
                             android:scaleY="0.7"
                             android:text="@string/textView_Nass"
@@ -1375,263 +1386,292 @@
                         <View
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27">
+                            android:layout_marginEnd="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_weight="30">
 
                         </View>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rahmen"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/textView_Bedingungen"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="22"
+                            android:padding="2dp"
+                            android:text="@string/textView_Bedingungen"
+                            android:textSize="12sp" />
+
+                        <RadioGroup
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="78"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionDrinnen"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="22"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Drinnen"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionDraussen"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="23"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Draussen"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionStaubig"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="25"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Staubig"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionHart"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="30"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Hart"
+                                android:textSize="12sp" />
+                        </RadioGroup>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
+                        android:layout_height="20dp"
                         android:weightSum="100">
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionDrinnen"
+                        <View
                             android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="22"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Drinnen"
-                            android:textSize="12sp" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="22" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionDraussen"
+                        <RadioGroup
                             android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Draussen"
-                            android:textSize="12sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionStaubig"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Staubig"
-                            android:textSize="12sp" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionHart"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Hart"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_margin="2dp"
-                        android:background="@drawable/rahmen"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:weightSum="100">
+                            android:layout_height="wrap_content"
+                            android:layout_weight="78"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
 
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionHolprig"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="22"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Holprig"
-                            android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionHolprig"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="22"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Holprig"
+                                android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionGerillt"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="24"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Gerillt"
-                            android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionGerillt"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="23"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Gerillt"
+                                android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionGlatt"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Glatt"
-                            android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionGlatt"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="25"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Glatt"
+                                android:textSize="12sp" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox_KonditionLahm"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_marginStart="-10dp"
-                            android:layout_weight="27"
-                            android:scaleX="0.7"
-                            android:scaleY="0.7"
-                            android:text="@string/textView_Lahm"
-                            android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/RadioButton_KonditionLahm"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="-15dp"
+                                android:layout_marginStart="-15dp"
+                                android:layout_weight="30"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="@string/textView_Lahm"
+                                android:textSize="12sp" />
+                        </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_Reifen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_Reifen"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp">
-
-                    <TextView
-                        android:id="@+id/textView_RENotizen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_FSNotizen"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_RENotizen"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:background="@drawable/edittext_b6"
-                        android:gravity="top"
-                        android:inputType="text"
-                        android:maxLength="172"
-                        android:padding="2dp"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_KarosseSpoilerGewicht"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_KarosseSpoilerGewicht"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/colorPrimaryDark"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:padding="2dp">
-
-                <TextView
-                    android:id="@+id/textView_FahrzeugKommentare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="@string/textView_FahrzeugKommentare"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp">
-
-                    <TextView
-                        android:id="@+id/textView_FahrzeugNotizen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="2dp"
-                        android:text="@string/textView_FSNotizen"
-                        android:textSize="12sp" />
-
-                    <EditText
-                        android:id="@+id/editText_VCNotizen"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:background="@drawable/edittext_b6"
-                        android:gravity="top"
-                        android:inputType="text"
-                        android:maxLength="172"
-                        android:padding="2dp"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
             </LinearLayout>
 
 
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_Reifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_Reifen"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textView_RENotizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_FSNotizen"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_RENotizen"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/edittext_b6"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:maxLength="172"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_KarosseSpoilerGewicht"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_KarosseSpoilerGewicht"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/textView_FahrzeugKommentare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/textView_FahrzeugKommentare"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textView_FahrzeugNotizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/textView_FSNotizen"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_VCNotizen"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/edittext_b6"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:maxLength="172"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
-</de.hammer.rccar.ZoomActivity>
+    </LinearLayout>
+</ScrollView>

@@ -46,7 +46,6 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(LOG_TAG, "FEHLERSUCHE!!!");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_sheet);
 
@@ -58,7 +57,6 @@ public class SetupSheetActivity extends AppCompatActivity implements View.OnClic
         btn_filter.setOnClickListener(this);
 
         initCAB();
-        Log.d(LOG_TAG, "FEHLERSUCHE!!!");
 
     }
 

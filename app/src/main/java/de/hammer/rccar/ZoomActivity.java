@@ -113,6 +113,7 @@ public class ZoomActivity extends ConstraintLayout implements ScaleGestureDetect
     public void onScaleEnd(ScaleGestureDetector scaleDetector) {
     }
 
+
     private void applyScaleAndTranslation() {
         child().setScaleX(scale);
         child().setScaleY(scale);
